@@ -1,7 +1,7 @@
 
 FlowRouter.route('/', {
     action: function() {
-        FlowRouter.go('/NewAssignment2');
+        FlowRouter.go('/dashboard2');
     }
 });
 

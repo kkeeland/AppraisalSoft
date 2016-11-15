@@ -14,7 +14,10 @@ Meteor.publish('indexid', function() {
   return IndexID.find(); 
 });
 
-
 Meteor.publish('insuranceprofiles', function() {
   return InsuranceCompanies.find(); 
 });
+
+Meteor.publish('claims', function () {
+    return Claims.find();
+  });

@@ -10,5 +10,9 @@ Meteor.methods({
 		
 		return ret.seq;
 
-	}
+	}, 
+	'addClaimdata': function(doc) {
+	    console.log("Adding", doc);
+	    Claims.insert(doc, function(err, docID) {console.log("DocID: ", docID);});
+  }
 })

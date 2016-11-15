@@ -12,25 +12,7 @@ Schemas.Claim = new SimpleSchema({
     unique: true, 
     label: "Date Recieved", 
     autoform: {
-            type: 'masked-input',
-            mask: '00/00/0000'
-        }
-  },
-  dateLoss: {
-    type: String,
-    unique: true,
-    label: "Date of Loss", 
-    autoform: {
-            type: 'masked-input',
-            mask: '00/00/0000'
-        }
-  },
-  dateInspection: {
-    type: String,
-    label: "Date of Inspection", 
-    autoform: {
-            type: 'masked-input',
-            mask: '00/00/0000'
+            
         }
   },
   appraisersOption: {
@@ -87,20 +69,8 @@ Schemas.Claim = new SimpleSchema({
             return opts;
       }
     }
-  }, 
-  claimNumber: {
-    type: String,
-    label: "Claim Number", 
-  }, 
-  policyNumber: {
-    type: String,
-    label: "Policy Number", 
-    optional:true
-  }, 
-  deductible: {
-    type: Number,
-    label: "Deductible", 
   }
+
 
 });
 
