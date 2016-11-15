@@ -1,0 +1,42 @@
+<template name="NewAssignment2">
+  <div id="page-content-wrapper">
+    <div class="page-content" style="padding:20px;padding-top:10px;">
+
+          <div style="height:60px;"><!-- new assignment header -->  
+          <div class="pull-left">
+          <h1>New Assignment</h1>
+          </div>
+           
+          <div class="pull-right index-style" style="text-align:right;">
+          <h2 style="margin-top:15px;">
+              {{#if uniqueindex}}
+              {{uniqueindex}}
+              {{else}}
+                0000000           
+              {{/if}}
+            
+          </h2>
+          <h5 class="text-center" style="margin-top: -15px;">INDEX NUMBER</h5>
+          </div> 
+           
+          </div><!-- end of header -->  
+           
+        
+        <br/>
+        <br/>
+
+<!-- ••• -->
+          {{>tabs}}
+          <div class=".col-md-12" style="background-color:white;padding:25px;">
+          {{> tabcontent}}
+          </div>
+
+
+      </div>
+  </div>
+
+</template>
+
+
+
+    

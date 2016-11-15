@@ -1,0 +1,49 @@
+<template name="tabcontent">
+  <div class="tab-content">
+    <div id="general" class="tab-pane fade in active">
+        
+        <div class="row">
+            {{#autoForm id="afInsertDemo" type="insert" schema=Schema.Claims collection="Claims"}}
+
+
+
+            <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
+            <label class="control-label">{{afFieldLabelText name='appraisersOption'}}</label>    
+            {{> afFieldInput type='select' name='appraisersOption'}}
+            {{#if afFieldIsInvalid name='appraisersOption'}}
+            <span class="help-block">{{{afFieldMessage name='appraisersOption'}}}</span>
+            {{/if}}
+            </div>
+
+
+            <div class="form-group {{#if afFieldIsInvalid name='insuranceCompanies'}}has-error{{/if}}">
+              <label class="control-label">{{afFieldLabelText name='insuranceCompanies'}}</label>
+              {{> afFieldInput id='insurancecompany' type='select' name='insuranceCompanies'}}
+              {{#if afFieldIsInvalid name='insuranceCompanies'}}
+                <span class="help-block">{{{afFieldMessage name='insuranceCompanies'}}}</span>
+              {{/if}}
+            </div>
+
+
+          {{/autoForm}}
+
+        </div>
+        
+
+        </div> <!-- end of tab1 -->               
+        
+    <div id="vehicle" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div><!-- end of tab2 -->
+
+    <div id="invoice" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div><!-- end of tab3 -->
+  </div><!-- end of ALL TAB CONTENT -->
+</template>
+
+<template name="appraiserselect">
+  <option value={{name}}>{{name}}</option>
+</template>

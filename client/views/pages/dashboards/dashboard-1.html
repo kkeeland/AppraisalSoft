@@ -1,0 +1,91 @@
+<template name="dashboard1">
+    <div class="container-fluid">
+        <div class="row">
+
+            <form action="../submit" id="formentry" class="form-horizontal" role="form" data-parsley-validate="" novalidate="">
+                <div class="container-fluid shadow">
+                    <div class="row">
+                        <div id="valErr" class="row viewerror clearfix hidden">
+                            <div class="alert alert-danger">Oops! Seems there are some errors..</div>
+                        </div>
+                        <div id="valOk" class="row viewerror clearfix hidden">
+                            <div class="alert alert-success">Yay! ..</div>
+                        </div>
+
+                        
+                                    <div class="row">
+                                        <div class="col-md-12"><div class="row" id="tab4" data-role="tab">
+                <ul class="nav nav-tabs">
+                      <li class="active"><a href="#tabContent5" data-toggle="tab" id="tabLabel5">Tab 1</a></li>
+                      <li class=""><a data-toggle="tab" href="#tabContent6" id="tabLabel6">Tab 2</a></li>
+                      <li class=""><a href="#tabContent7" data-toggle="tab" id="tabLabel7">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="tabContent5"><div class=""><div class="row"><div class="col-md-4"><div class="form-group">
+                <label class="control-label control-label-left col-sm-3" for="appraiser">Select Appraiser<span class="req"> *</span></label>
+                <div class="controls col-sm-9">
+                    
+                <span class="k-widget k-dropdown k-header form-control" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="appraiser_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false" aria-activedescendant="appraiser_option_selected" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Nick</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select id="appraiser" class="form-control" data-role="select" name="Appraiser" required="required" data-parsley-errors-container="#errId1" data-parsley-id="0956" style="display: none;"><option value="">None</option><option value="Option 1">Kevin</option><option value="Option 2" selected="selected">Nick</option><option value="Option 3">Option 3</option><option value="Option 4">Option 4</option></select></span><span id="errId1" class="error"><ul class="parsley-errors-list" id="parsley-id-0956"></ul></span></div>
+                
+        </div><div class="form-group">
+                <label class="control-label control-label-left col-sm-3" for="claimnumber">Claim Number<span class="req"> *</span></label>
+                <div class="controls col-sm-9">
+                    
+                <input id="claimnumber" type="text" class="form-control k-textbox" data-role="text" required="required" name="Claim Number" data-parsley-errors-container="#errId2" data-parsley-id="1078"><span id="errId2" class="error"><ul class="parsley-errors-list" id="parsley-id-1078"></ul></span></div>
+                
+        </div></div><div class="col-md-4"><div class="form-group">
+                <label class="control-label control-label-left col-sm-3" for="insuranceprofile">Select Insurance Co. <span class="req"> *</span></label>
+                <div class="controls col-sm-9">
+                    
+                <span class="k-widget k-dropdown k-header form-control" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="insuranceprofile_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false" aria-activedescendant="insuranceprofile_option_selected" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Amica</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><select id="insuranceprofile" class="form-control" data-role="select" name="Insurance Company" required="required" data-parsley-errors-container="#errId3" data-parsley-id="1582" style="display: none;"><option value="">None</option><option value="Option 1" selected="selected">Amica</option><option value="Option 2">The General</option><option value="Option 3">American Family</option><option value="Option 4">Option 4</option></select></span><span id="errId3" class="error"><ul class="parsley-errors-list" id="parsley-id-1582"></ul></span></div>
+                
+        </div><div class="form-group">
+                <label class="control-label control-label-left col-sm-3" for="dateofloss">Date of Loss<span class="req"> *</span></label>
+                <div class="controls col-sm-9">
+                    
+                <input id="dateofloss" type="text" class="form-control k-textbox" data-role="text" required="required" name="Date of Loss" data-parsley-errors-container="#errId4" data-parsley-id="6753"><span id="errId4" class="error"><ul class="parsley-errors-list" id="parsley-id-6753"></ul></span></div>
+                
+        </div></div><div class="col-md-4"><div class="form-group">
+                <label class="control-label control-label-left col-sm-3" for="dateinspected">Date Recieved<span class="req"> *</span></label>
+                <div class="controls col-sm-9">
+                    
+                <input id="dateinspected" type="text" class="form-control k-textbox" data-role="text" name="Date Inspected" required="required" data-parsley-errors-container="#errId5" data-parsley-id="5243"><span id="errId5" class="error"><ul class="parsley-errors-list" id="parsley-id-5243"></ul></span></div>
+                
+        </div><div class="form-group">
+                <label class="control-label control-label-left col-sm-3" for="dateofinspection">Date of Inspection</label>
+                <div class="controls col-sm-9">
+                    
+                <input id="dateofinspection" type="text" class="form-control k-textbox" data-role="text" name="Date of Inspection" data-parsley-errors-container="#errId6" data-parsley-id="9455"><span id="errId6" class="error"><ul class="parsley-errors-list" id="parsley-id-9455"></ul></span></div>
+                
+        </div></div></div></div></div>
+                  <div class="tab-pane" id="tabContent6"><div class=""></div></div>
+                  <div class="tab-pane" id="tabContent7"><div class=""></div></div>
+                </div>
+        </div></div>
+                                    </div>
+                                
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+
+<template name="notificationList">
+    <ul class="list-group clear-list m-t">
+        {{#each this}}
+            {{>notificationElement}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="notificationElement">
+    <li class="list-group-item">
+        <span class="pull-right">
+            {{time}}
+        </span>
+        <span class="label label-{{labelClass}}">{{number}}</span> {{content}}
+    </li>
+</template>

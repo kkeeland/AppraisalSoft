@@ -1,0 +1,69 @@
+<template name="AdjusterModal">
+
+<!-- start of modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+
+    <div class="modal-content">
+      <div class="modal-header">
+      <h4 class="modal-title" id="exampleModalLabel">Add Adjuster</h4>
+      </div>
+      
+      <div class="modal-body">
+
+              <form class="form-horizontal">
+              <fieldset>
+
+              <!-- Select Basic -->
+              <div class="form-group">
+
+              <label class="col-md-1 control-label" for="selectbasic">Insurance Company</label>
+              <div class="col-md-2 col-lg-2">
+                 <select id="selectbasic" name="selectbasic" class="form-control">
+                    <option value="1">Amica</option>
+                    <option value="2">PGC</option>
+                    <option value="3">Country Financial</option>
+                    <option value="4">Amica</option>
+                 </select>
+              </div>
+
+              <label class="col-md-1 control-label" for="textinput">Adjuster Name </label>  
+              <div class="col-md-3">
+                <input id="textinput" name="textinput" type="text" placeholder="Adjuster Name" class="form-control input-md">
+              </div>
+              </div>
+              <br>
+
+              <div class="form-group">
+
+
+                <label class="col-md-1 control-label" for="textinput">Adjuster Phone</label>  
+                <div class="col-md-3">
+                  <input id="textinput" name="textinput" type="text" placeholder="Adjuster Phone" class="form-control input-md">
+                </div>
+
+                <div class="col-md-2 pull-left">
+                <div class="input-group">
+                <span class="input-group-addon">Ext.</span>
+                <input id="textinput" name="textinput" type="text" placeholder="ext" class="form-control">
+                </div>
+                </div>
+
+                <label class="col-md-1 control-label" for="textinput">Adjuster Direct</label> 
+                <div class="col-md-3 col-lg">
+                <input id="textinput" name="textinput" type="text" placeholder="Direct" class="form-control">
+                </div>
+
+
+              </div><!-- end of form group -->
+
+             
+            </fieldset>
+          </form>
+
+
+      </div>
+    </div>
+  </div> <!-- end of form group -->
+</div><!-- end of modal -->
+</template>
