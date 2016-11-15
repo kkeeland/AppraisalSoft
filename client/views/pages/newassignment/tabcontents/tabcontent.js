@@ -42,7 +42,8 @@ Template.tabcontent.events({
             return entity.seq;
         });
         var indexNumber = indexNumber[0];
-        // SET SESSION VARIABLE FOR SEQUENCE NUMBER
+      
+       // SET SESSION VARIABLE FOR SEQUENCE NUMBER
 
         Session.set('index-number', indexNumber);
   }, 
@@ -52,7 +53,7 @@ Template.tabcontent.events({
 });
 
 
-
+    
   //Increase Index Number by One 
   //Add to Counter Database of IndexID 
     increaseIndexOne = function() {

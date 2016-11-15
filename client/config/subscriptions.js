@@ -1,3 +1,4 @@
+
 Meteor.subscribe('claims');
 Meteor.subscribe('appraisers');
 Meteor.subscribe('people');

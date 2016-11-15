@@ -6,3 +6,15 @@ Meteor.startup(() => {
 });
 
 
+Meteor.publish('appraisers', function() {
+  return Appraisers.find(); 
+});
+
+Meteor.publish('indexid', function() {
+  return IndexID.find(); 
+});
+
+
+Meteor.publish('insuranceprofiles', function() {
+  return InsuranceCompanies.find(); 
+});
