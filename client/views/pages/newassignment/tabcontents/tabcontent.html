@@ -1,133 +1,142 @@
 <template name="tabcontent">
-<div class="tab-content">
-    <div id="general" class="tab-pane fade in active"> <!-- Start of Tab -->  
-        
-        {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
+  <div class="tab-content">
+    <div id="general" class="tab-pane fade in active">
+      <!-- Start of Tab -->
 
-        <div class="row spacethebottom">           <!-- Start of Row 1a -->  
+      {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
 
-          <div class="form-group {{#if afFieldIsInvalid name='insuranceCompanies'}}has-error{{/if}}">
+      <!-- Start of Row 1a -->
+
+      <div class="row spacethebottom">
+
+        <div class="form-group {{#if afFieldIsInvalid name='insuranceCompanies'}}has-error{{/if}}">
           <label class="col-md-2 control-label">Insurance Profile</label>
-           <div class="col-md-3">
-              {{> afFieldInput id='insurancecompany' type='select' name='insuranceCompanies'}}
-              {{#if afFieldIsInvalid name='insuranceCompanies'}}
-                <span class="help-block">{{{afFieldMessage name='insuranceCompanies'}}}</span>
-              {{/if}}
-            </div>
+          <div class="col-md-3">
+            {{> afFieldInput id='insurancecompany' type='select' name='insuranceCompanies'}} {{#if afFieldIsInvalid name='insuranceCompanies'}}
+            <span class="help-block">{{{afFieldMessage name='insuranceCompanies'}}}</span> {{/if}}
           </div>
+        </div>
 
-        </div><!-- End of Row 1a --> 
+      </div>
+
+      <!-- End of Row 1a -->
+
+      <!-- Start of Row 1 -->
+
+      <div class="row spacethebottom">
 
 
-
-         <div class="row spacethebottom">           <!-- Start of Row 1 -->  
-          
-          
-          <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
-          <label class="col-md-1 control-label">Appraiser</label>    
-              <div class="col-md-3">
-                {{> afFieldInput type='select' name='appraisersOption'}}
-                {{#if afFieldIsInvalid name='appraisersOption'}}
-                <span class="help-block">{{{afFieldMessage name='appraisersOption'}}}</span>
-                {{/if}}
-              </div>
+        <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
+          <label class="col-md-1 control-label">Appraiser</label>
+          <div class="col-md-3">
+            {{> afFieldInput type='select' name='appraisersOption'}} {{#if afFieldIsInvalid name='appraisersOption'}}
+            <span class="help-block">{{{afFieldMessage name='appraisersOption'}}}</span> {{/if}}
           </div>
+        </div>
 
 
-          
-
-          <div class="form-group {{#if afFieldIsInvalid name='date_recieved'}}has-error{{/if}}">
+        <div class="form-group {{#if afFieldIsInvalid name='date_recieved'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Date Recieved</label>
-            <div class="col-md-3">
-              {{> afFieldInput id='date_recieved' placeholder='11/15/16' type='text' name='date_recieved'}}
-              {{#if afFieldIsInvalid name='date_recieved'}}
-                <span class="help-block">{{{afFieldMessage name='date_recieved'}}}</span>
-              {{/if}}
-            </div>
+          <div class="col-md-3">
+            {{> afFieldInput id='date_recieved' placeholder='11/15/16' type='text' name='date_recieved'}} {{#if afFieldIsInvalid name='date_recieved'}}
+            <span class="help-block">{{{afFieldMessage name='date_recieved'}}}</span> {{/if}}
           </div>
-        </div><!-- end of row 1 -->  
+        </div>
+      </div>
 
-        <div class="row spacethebottom"> <!-- start of row 2 -->   
-          
-          <div class="form-group {{#if afFieldIsInvalid name='typeLoss'}}has-error{{/if}}">
+
+      <!-- end of row 1 -->
+
+
+      <!-- start of row 2 -->
+
+      <div class="row spacethebottom">
+
+        <div class="form-group {{#if afFieldIsInvalid name='typeLoss'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Type of Loss</label>
-            <div class="col-md-3">
-              {{> afFieldInput id='typeLoss' type='select' name='typeLoss'}}
-              {{#if afFieldIsInvalid name='typeLoss'}}
-                <span class="help-block">{{{afFieldMessage name='typeLoss'}}}</span>
-              {{/if}}
-            </div>
-          </div>   
+          <div class="col-md-3">
+            {{> afFieldInput id='typeLoss' type='select' name='typeLoss'}} {{#if afFieldIsInvalid name='typeLoss'}}
+            <span class="help-block">{{{afFieldMessage name='typeLoss'}}}</span> {{/if}}
+          </div>
+        </div>
 
-        </div> <!-- end of row 2 -->  
+      </div>
 
 
-          <div class="row spacethebottom">           <!-- Start of index number row --> 
-          
-          {{#if uniqueindexnum}}<!-- Is there a UNIQUE ID yet? if SO... show it --> 
-          <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
-            <label class="col-md-1 control-label">Index Number</label>
-              <div class="col-md-2">
-                {{> afFieldInput id='index' value=uniqueindexnum type='text' name='index' readonly=true}}
-                {{#if afFieldIsInvalid name='index'}}
-                  <span class="help-block">{{{afFieldMessage name='index'}}}</span>
-                {{/if}}
-              </div>
-            </div>
-            {{else}} <!-- Else show NO ID YET--> 
-            <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
-            <label class="col-md-1 control-label">Index Number</label>
-              <div class="col-md-2">
-                {{> afFieldInput id='index' value='NO INDEX # YET' type='text' name='index' readonly=true}}
-                {{#if afFieldIsInvalid name='index'}}
-                  <span class="help-block">{{{afFieldMessage name='index'}}}</span>
-                {{/if}}
-              </div>
-            </div>
-            {{/if}}<!-- end of Unique ID IF Statement --> 
+      <!-- end of row 2 -->
 
 
+      <!-- Start of index number row -->
+
+      <div class="row spacethebottom">
+
+        <!-- Is there a UNIQUE ID yet? if SO... show it -->
+
+        {{#if uniqueindexnum}}
+
+        <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
+          <label class="col-md-1 control-label">Index Number</label>
+          <div class="col-md-2">
+            {{> afFieldInput id='index' value=uniqueindexnum type='text' name='index' readonly=true}} {{#if afFieldIsInvalid name='index'}}
+            <span class="help-block">{{{afFieldMessage name='index'}}}</span> {{/if}}
+          </div>
+        </div>
+
+        <!-- Else show NO ID YET-->
+
+        {{else}}
+
+        <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
+          <label class="col-md-1 control-label">Index Number</label>
+          <div class="col-md-2">
+            {{> afFieldInput id='index' value='NO INDEX # YET' type='text' name='index' readonly=true}} {{#if afFieldIsInvalid name='index'}}
+            <span class="help-block">{{{afFieldMessage name='index'}}}</span> {{/if}}
+          </div>
+        </div>
+        {{/if}}
+
+        <!-- end of Unique ID IF Statement -->
+
+      </div>
+      <!-- end of index number row -->
+
+      <!-- start of button -->
+
+      <div class="row spacethebottom">
+        <div class="col-md-3">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- end of button -->
+
+      {{/autoForm}}
+
+    </div>
+    <!-- end of tab1 -->
 
 
+    <!-- Start of Tab 2 -->
 
-
-          
-       
-
-
-        </div><!-- end of index number row -->   
-        
-        <div class="row spacethebottom"> <!-- start of button -->   
-              <div class="col-md-3">
-                <div class="form-group">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </div>
-        </div><!-- end of button -->   
-
-
-
-
-
-      
-        
-
-
-        {{/autoForm}}
-    
-    </div> <!-- end of tab1 -->               
-        
-    <div id="vehicle" class="tab-pane fade">  <!-- Start of Tab 2 -->  
+    <div id="vehicle" class="tab-pane fade">
       <h3>Menu 1</h3>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div><!-- end of tab2 -->
+    </div>
 
-    <div id="invoice" class="tab-pane fade">  <!-- Start of Tab 3 -->  
+    <!-- end of tab2 -->
+    <!-- Start of Tab 3 -->
+
+    <div id="invoice" class="tab-pane fade">
       <h3>Menu 2</h3>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-    </div><!-- end of tab3 -->
+    </div>
 
-</div><!-- end of ALL TAB CONTENT -->
+    <!-- end of tab3 -->
 
-</template> <!-- End of template-->  
+  </div>
+  <!-- end of ALL TAB CONTENT -->
 
+</template>
+<!-- End of template-->
