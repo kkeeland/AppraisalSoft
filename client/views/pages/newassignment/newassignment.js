@@ -44,7 +44,7 @@ Schemas.Claim = new SimpleSchema({
   }, 
   typeLoss: {
     type:String, 
-    optional:true,
+    optional:false,
     autoform: {
       type:"select",
       afFieldInput: {
@@ -99,14 +99,5 @@ Template.NewAssignment2.helpers({
         return uniqueindex; 
       }
 
-});
-
-IndexID.allow({
-  insert: function () {
-    return true;
-  },
-  remove: function () {
-    return true;
-  }
 });
 

@@ -2,11 +2,10 @@
 <div class="tab-content">
     <div id="general" class="tab-pane fade in active"> <!-- Start of Tab -->  
         
-        {{#autoForm id="afInsertDemo" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
+        {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
          <div class="row spacethebottom">           <!-- Start of Row 1 -->  
           
           
-
           <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Appraiser</label>    
               <div class="col-md-3">
@@ -56,7 +55,7 @@
 
           <div class="row spacethebottom">           <!-- Start of index number row --> 
           
-
+          {{#if uniqueindexnum}}<!-- Is there a UNIQUE ID yet? if SO... show it --> 
           <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
             <label class="col-md-2 control-label">Index Number</label>
               <div class="col-md-2">
@@ -66,6 +65,24 @@
                 {{/if}}
               </div>
             </div>
+            {{else}} <!-- Else show NO ID YET--> 
+            <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
+            <label class="col-md-2 control-label">Index Number</label>
+              <div class="col-md-2">
+                {{> afFieldInput id='index' value='NO INDEX # YET' type='text' name='index' readonly=true}}
+                {{#if afFieldIsInvalid name='index'}}
+                  <span class="help-block">{{{afFieldMessage name='index'}}}</span>
+                {{/if}}
+              </div>
+            </div>
+            {{/if}}<!-- end of Unique ID IF Statement --> 
+
+
+
+
+
+
+          
        
 
 

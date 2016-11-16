@@ -15,9 +15,9 @@ Template.tabcontent.helpers({
       return Appraisers.find();
      }, 
      uniqueindexnum: function(){
-        var uniqueindexnum = Session.get('uniqueindex');
-        return uniqueindexnum;
-
+       
+            var uniqueindexnum = Session.get('uniqueindex');
+            return uniqueindexnum;
      }
     // the new index number 
     
