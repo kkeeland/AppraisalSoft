@@ -3,6 +3,23 @@
     <div id="general" class="tab-pane fade in active"> <!-- Start of Tab -->  
         
         {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
+
+        <div class="row spacethebottom">           <!-- Start of Row 1a -->  
+
+          <div class="form-group {{#if afFieldIsInvalid name='insuranceCompanies'}}has-error{{/if}}">
+          <label class="col-md-2 control-label">Insurance Profile</label>
+           <div class="col-md-3">
+              {{> afFieldInput id='insurancecompany' type='select' name='insuranceCompanies'}}
+              {{#if afFieldIsInvalid name='insuranceCompanies'}}
+                <span class="help-block">{{{afFieldMessage name='insuranceCompanies'}}}</span>
+              {{/if}}
+            </div>
+          </div>
+
+        </div><!-- End of Row 1a --> 
+
+
+
          <div class="row spacethebottom">           <!-- Start of Row 1 -->  
           
           
@@ -17,15 +34,7 @@
           </div>
 
 
-          <div class="form-group {{#if afFieldIsInvalid name='insuranceCompanies'}}has-error{{/if}}">
-          <label class="col-md-1 control-label">Insurance Profile</label>
-           <div class="col-md-3">
-              {{> afFieldInput id='insurancecompany' type='select' name='insuranceCompanies'}}
-              {{#if afFieldIsInvalid name='insuranceCompanies'}}
-                <span class="help-block">{{{afFieldMessage name='insuranceCompanies'}}}</span>
-              {{/if}}
-            </div>
-          </div>
+          
 
           <div class="form-group {{#if afFieldIsInvalid name='date_recieved'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Date Recieved</label>

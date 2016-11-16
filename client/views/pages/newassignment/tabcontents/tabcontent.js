@@ -28,9 +28,9 @@ Template.tabcontent.helpers({
 
 var hooksObject = { 
   onSuccess: function (addClaimdata, doc){
-
-        Session.set('uniqueindex', undefined);
-
+        var uniqueindexnum = Session.get('uniqueindex');
+        swal("Good job!", "Successfully inserted a new index: " + uniqueindexnum, "success")
+       
   }
 
 };
