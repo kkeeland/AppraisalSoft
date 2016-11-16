@@ -12,8 +12,11 @@ Meteor.methods({
 
 	}, 
 	'addClaimdata': function(doc) {
-	    console.log("Adding", doc);
+
 	    console.log("Adding", doc.appraisersOption);
+	    doc.createdAt = (new Date());
+	    console.log("Adding", doc);
 	    Claims.insert(doc, function(err, docID) {console.log("DocID: ", docID);});
+
   }
 })

@@ -26,6 +26,17 @@ Template.tabcontent.helpers({
 
 
 
+var hooksObject = { 
+  onSuccess: function (addClaimdata, doc){
+
+        Session.set('uniqueindex', undefined);
+
+  }
+
+};
+
+AutoForm.addHooks('newAssignment', hooksObject);
+
 
 
 Template.tabcontent.events({
