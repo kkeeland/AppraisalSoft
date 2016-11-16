@@ -3,7 +3,7 @@
     <div id="general" class="tab-pane fade in active"> <!-- Start of Tab -->  
         
         {{#autoForm id="afInsertDemo" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
-        <div class="row spacethebottom">           <!-- Start of Row 1 -->  
+         <div class="row spacethebottom">           <!-- Start of Row 1 -->  
           
           
 
@@ -49,19 +49,41 @@
                 <span class="help-block">{{{afFieldMessage name='typeLoss'}}}</span>
               {{/if}}
             </div>
-          </div>
+          </div>   
 
-        </div> <!-- end of row 2 -->   
+        </div> <!-- end of row 2 -->  
+
+
+          <div class="row spacethebottom">           <!-- Start of index number row --> 
+          
+
+          <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
+            <label class="col-md-2 control-label">Index Number</label>
+              <div class="col-md-2">
+                {{> afFieldInput id='index' value=uniqueindexnum type='text' name='index' readonly=true}}
+                {{#if afFieldIsInvalid name='index'}}
+                  <span class="help-block">{{{afFieldMessage name='index'}}}</span>
+                {{/if}}
+              </div>
+            </div>
+       
+
+
+        </div><!-- end of index number row -->   
         
-        <div class="row spacethebottom"> <!-- start of row 3 -->   
+        <div class="row spacethebottom"> <!-- start of button -->   
               <div class="col-md-3">
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
-        </div><!-- end of row 4 -->   
+        </div><!-- end of button -->   
 
 
+
+
+
+      
         
 
 

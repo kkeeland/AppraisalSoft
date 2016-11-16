@@ -13,6 +13,11 @@ Template.tabcontent.helpers({
      }, 
      appraisers: function(){
       return Appraisers.find();
+     }, 
+     uniqueindexnum: function(){
+        var uniqueindexnum = Session.get('uniqueindex');
+        return uniqueindexnum;
+
      }
     // the new index number 
     

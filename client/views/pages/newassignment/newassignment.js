@@ -15,6 +15,14 @@ Schemas.Claim = new SimpleSchema({
             
         }
   },
+  index: {
+    type: String,
+    unique: true,  
+    optional:true,
+    autoform: {
+            
+        }
+  },
   appraisersOption: {
     type: String,
     autoform: {
@@ -70,7 +78,6 @@ Schemas.Claim = new SimpleSchema({
       }
     }
   }
-
 
 });
 
