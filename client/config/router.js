@@ -1,7 +1,7 @@
 
 FlowRouter.route('/', {
     action: function () {
-        FlowRouter.go('/dashboard2');
+        FlowRouter.go('/dashboard');
     }
 });
 
@@ -11,9 +11,9 @@ FlowRouter.route('/newassignment', {
     }
 });
 
-FlowRouter.route('/dashboard2', {
+FlowRouter.route('/dashboard', {
     action: function () {
-        BlazeLayout.render("mainLayout", { content: "dashboard2" });
+        BlazeLayout.render("mainLayout", { content: "dashboard" });
     }
 });
 
