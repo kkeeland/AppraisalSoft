@@ -1,0 +1,116 @@
+Claims: (Collection)
+	
+	ObjectID
+	////////General Info 
+	Claim Number (String)
+	Policy Number (String)
+	Index Number (String)
+	Company (String)
+	Date of Loss (Date)
+	Type of Loss (COLL, COMP, LIAB) (Select String)
+	Date Requested 	(Date)
+	Date Inspected	(Date)
+	Insured Name	
+	Insured Home Phone
+	Insured Work Phone	
+	Insured Other Number	
+	Insured Email	
+	Insured Address	
+	Claimant Name
+	Claimant Home Phone
+	Claimant Work Phone	
+	Claimant Other Number	
+	Claimant Email	
+	Claimant Address
+
+	////////Vehicle Info 
+	Vehicle Year (Date: year)
+	Vehicle Make (String)
+	Location (Work, Shop, Residence)	
+	Vehicle Model (String)
+	City of Vehicle (String)
+	License Plate Number (String)
+	Vehicle ID# (String)
+	Odometer (Number)
+	Vehicle Color (String)
+	Location of Type (Business, Residence, Shop, Other) (Select String)
+	Appraisal Address (String)
+	Shop/Agreed Price With (string)
+	Location Phone (string)
+	Location Fax (string)
+	Location Address (string)
+	Location City
+	Location State 
+	Location Email
+	Area of Damage (Front, Rear, Left Side, Right Side, Roll/Roof, Under, Fire, Comp) (select)
+	Summary of Loss (string)
+	Special Instructions (string)
+	Cross Street (string)
+	Directions (string)
+	Towing Cost (string)
+	Storage Cost Per Day (string)
+	Day Since (string)
+
+///////////Claims Collection END
+
+
+
+Adjusters: (Collection)
+
+	Adjuster (String)
+	Adjuster Direct Number (String)
+	Adjuster Phone (String)
+	Adjuster Extension 
+	Adjuster Email (String: Email)
+	Insurance Company: (ObjectID)
+
+Settings:
+	
+		Office City
+		Appraisers
+		Bootstrap theme
+
+Insurance Companies (Collection)
+	Name:
+	Suffix: 
+	Total Loss Rate: (number)
+	Repairable Rate: (number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
