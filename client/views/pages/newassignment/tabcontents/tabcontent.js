@@ -1,79 +1,79 @@
 Template.tabcontent.helpers({
-		claims: function() {
-		    return Claims.find();
-		}, 
-		now: function () {
-    	var now = moment().format('L');
-      return now;
-    },
+  claims: function () {
+    return Claims.find();
+  },
+  now: function () {
+    var now = moment().format('L');
+    return now;
+  },
+  then: function () {
+    var then = moment().format('L');
+    return then;
+  },
+  appraisers: function () {
+    return Appraisers.find();
+  },
+  uniqueindexnum: function () {
 
-    then: function () {
-    	var then = moment().format('L');
-      return then;
-     }, 
-     appraisers: function(){
-      return Appraisers.find();
-     }, 
-     uniqueindexnum: function(){
-       
-            var uniqueindexnum = Session.get('uniqueindex');
-            return uniqueindexnum;
-     }
-    // the new index number 
-    
+    var uniqueindexnum = Session.get('uniqueindex');
+    return uniqueindexnum;
+  }
+
 });
 
+//autoform hooks obj for on success function
 
+var hooksObject = {
+  onSuccess: function (addClaimdata, doc) {
+    var uniqueindexnum = Session.get('uniqueindex');
+    swal("Good job!", "Successfully inserted a new index: " + uniqueindexnum, "success")
 
-
-var hooksObject = { 
-  onSuccess: function (addClaimdata, doc){
-        var uniqueindexnum = Session.get('uniqueindex');
-        swal("Good job!", "Successfully inserted a new index: " + uniqueindexnum, "success")
-       
   }
 
 };
 
+
+//call autoform on success after insert in Claims db
 AutoForm.addHooks('newAssignment', hooksObject);
 
 
 
 Template.tabcontent.events({
   //EVENTS WHEN CHANGE INSURANCE COMPANY
-  'change #insurancecompany' : function(event){
-        
-      //GRAB THE INFORMATION FROM THE DROPDOWN ON CHANGE
-        var insuranceID = $("#insurancecompany :selected").val();
+  'change #insurancecompany': function (event) {
 
-      //SET THE SESSION VARIABLE FOR INSURANCE SUFFIX E.G, ALO FOR AMICA
-        Session.set('index-id', insuranceID);
-        console.log(Session.get('index-id'));  
-      
+    //GRAB THE INFORMATION FROM THE DROPDOWN ON CHANGE
+    var insuranceID = $("#insurancecompany :selected").val();
 
-      //increase the seq number by one
-        increaseIndexOne();
-
-        var indexNumber = IndexID.find().map(function(entity){
-            return entity.seq;
-        });
-        var indexNumber = indexNumber[0];
-      
-       // SET SESSION VARIABLE FOR SEQUENCE NUMBER
-
-        Session.set('index-number', indexNumber);
-  }, 
+    //SET THE SESSION VARIABLE FOR INSURANCE SUFFIX E.G, ALO FOR AMICA
+    Session.set('index-id', insuranceID);
+    console.log(Session.get('index-id'));
 
 
-   
+    //increase the seq number by one
+    increaseIndexOne();
+
+    var indexNumber = IndexID.find().map(function (entity) {
+      return entity.seq;
+    });
+    var indexNumber = indexNumber[0];
+
+    // SET SESSION VARIABLE FOR SEQUENCE NUMBER
+
+    Session.set('index-number', indexNumber);
+  },
+
+
+
 });
 
 
-    
-  //Increase Index Number by One 
-  //Add to Counter Database of IndexID 
-    increaseIndexOne = function() {
-        Meteor.call("updateseq");
-    }
+
+//Increase Index Number by One 
+//Add to Counter Database of IndexID 
+
+increaseIndexOne = function () {
+  Meteor.call("updateseq");
+}
 
 
