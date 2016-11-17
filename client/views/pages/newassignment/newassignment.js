@@ -89,7 +89,7 @@ Template.registerHelper("Collections", Collections);
 
 Claims.attachSchema(Schemas.Claim);
 
-Template.NewAssignment2.helpers({
+Template.NewAssignment.helpers({
       
       uniqueindex: function() {
         var insurancesuffix = Session.get('index-id');

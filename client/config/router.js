@@ -7,7 +7,7 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/newassignment', {
     action: function () {
-        BlazeLayout.render("mainLayout", { content: "NewAssignment2" });
+        BlazeLayout.render("mainLayout", { content: "NewAssignment" });
     }
 });
 
