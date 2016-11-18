@@ -38,13 +38,21 @@
         <div class="form-group {{#if afFieldIsInvalid name='date_recieved'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Date Recieved</label>
           <div class="col-md-3">
-            {{> afFieldInput id='date_recieved' placeholder='11/15/16' type='text' name='date_recieved'}} {{#if afFieldIsInvalid name='date_recieved'}}
+            {{> afFieldInput id='date_recieved' placeholder=now type='date' name='date_recieved'}} {{#if afFieldIsInvalid name='date_recieved'}}
             <span class="help-block">{{{afFieldMessage name='date_recieved'}}}</span> {{/if}}
           </div>
         </div>
+
+
+        <div class="form-group {{#if afFieldIsInvalid name='policyNumber'}}has-error{{/if}}">
+          <label class="col-md-1 control-label">Policy Number</label>
+          <div class="col-md-3">
+            {{> afFieldInput id='policyNumber' type='text' name='policyNumber'}} {{#if afFieldIsInvalid name='policyNumber'}}
+            <span class="help-block">{{{afFieldMessage name='policyNumber'}}}</span> {{/if}}
+          </div>
+        </div>
+
       </div>
-
-
       <!-- end of row 1 -->
 
 
@@ -57,6 +65,22 @@
           <div class="col-md-3">
             {{> afFieldInput id='typeLoss' type='select' name='typeLoss'}} {{#if afFieldIsInvalid name='typeLoss'}}
             <span class="help-block">{{{afFieldMessage name='typeLoss'}}}</span> {{/if}}
+          </div>
+        </div>
+
+        <div class="form-group {{#if afFieldIsInvalid name='dateofloss'}}has-error{{/if}}">
+          <label class="col-md-1 control-label">Date of Loss</label>
+          <div class="col-md-3">
+            {{> afFieldInput id='dateofloss' placeholder='now' type='date' name='dateofloss'}} {{#if afFieldIsInvalid name='dateofloss'}}
+            <span class="help-block">{{{afFieldMessage name='dateofloss'}}}</span> {{/if}}
+          </div>
+        </div>
+
+         <div class="form-group {{#if afFieldIsInvalid name='dateofinspection'}}has-error{{/if}}">
+          <label class="col-md-1 control-label">Date of Inspection</label>
+          <div class="col-md-3">
+            {{> afFieldInput id='dateofinspection' placeholder='now' type='date' name='dateofinspection'}} {{#if afFieldIsInvalid name='dateofinspection'}}
+            <span class="help-block">{{{afFieldMessage name='dateofinspection'}}}</span> {{/if}}
           </div>
         </div>
 

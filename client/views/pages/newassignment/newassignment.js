@@ -6,10 +6,30 @@ Template.registerHelper("Schemas", Schemas);
 
 
 Schemas.Claim = new SimpleSchema({
+  dateofinspection: {
+    type: Date,
+    label: "Date Inspected", 
+    autoform: {
+            
+        }
+  },
+  dateofloss: {
+    type: Date,
+    label: "Date Recieved", 
+    autoform: {
+            
+        }
+  },
+  policyNumber: {
+    type: String, 
+    label: "Policy Number", 
+    autoform: {
+            
+        }
+  },
   
   date_recieved: {
-    type: String,
-    unique: true, 
+    type: Date,
     label: "Date Recieved", 
     autoform: {
             
@@ -17,8 +37,9 @@ Schemas.Claim = new SimpleSchema({
   },
   index: {
     type: String,
-    unique: true,  
-    optional:true,
+    unique: true,
+    index: 1,   
+    optional:false,
     autoform: {
             
         }
