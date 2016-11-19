@@ -6,6 +6,13 @@ Template.registerHelper("Schemas", Schemas);
 
 
 Schemas.Claim = new SimpleSchema({
+  insuredName: {
+    type: String, 
+    label: "Insured Name", 
+    autoform: {
+            
+        }
+  },
   dateofinspection: {
     type: Date,
     label: "Date Inspected", 

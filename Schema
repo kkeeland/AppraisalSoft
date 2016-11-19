@@ -2,14 +2,14 @@ Claims: (Collection)
 	
 	ObjectID
 	////////General Info 
-	Claim Number (String)
-	Policy Number (String)
-	Index Number (String)
-	Company (String)
-	Date of Loss (Date)
-	Type of Loss (COLL, COMP, LIAB) (Select String)
-	Date Requested 	(Date)
-	Date Inspected	(Date)
+	//Claim Number (String)
+	//Policy Number (String)
+	//Index Number (String)
+	//Company (String)
+	//Date of Loss (Date)
+	//Type of Loss (COLL, COMP, LIAB) (Select String)
+	//Date Requested 	(Date)
+	//Date Inspected	(Date)
 	Insured Name	
 	Insured Home Phone
 	Insured Work Phone	

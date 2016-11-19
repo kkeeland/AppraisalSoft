@@ -3,7 +3,7 @@ Template.tabcontent.helpers({
     return Claims.find();
   },
   now: function () {
-    var now = moment().format('L');
+    var now = moment().format('MM-DD-YY');
     return now;
   },
   then: function () {
