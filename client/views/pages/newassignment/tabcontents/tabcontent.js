@@ -17,7 +17,24 @@ Template.tabcontent.helpers({
 
     var uniqueindexnum = Session.get('uniqueindex');
     return uniqueindexnum;
+  }, 
+  // TEMP CONNECTION TO APPRAISER DB/NEED TO MAKE SHOP DB AND ADD FUNCTION/MODAL
+  settings : function() {
+    return {
+      position: "bottom",
+      limit: 10, 
+      rules: [
+        {
+          // token: '',
+          collection: Appraisers,
+          field: 'appraisername',
+          matchAll: true,
+          template: Template.shopnamePill
+        } 
+      ]
+    };
   }
+
 
 });
 

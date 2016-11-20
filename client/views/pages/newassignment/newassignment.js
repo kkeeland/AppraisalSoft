@@ -4,8 +4,20 @@ Schemas = {};
 
 Template.registerHelper("Schemas", Schemas);
 
+//autocomplete settings for shop 
+
 
 Schemas.Claim = new SimpleSchema({
+  shopname: {
+    type: String, 
+    label: "Shop Name", 
+    autoform:{
+      afFieldInput: {
+        type: 'autocomplete-input'
+      }
+    }
+
+  }, 
   insuredName: {
     type: String, 
     label: "Insured Name", 
@@ -14,11 +26,11 @@ Schemas.Claim = new SimpleSchema({
         }
   },
   dateofinspection: {
-    type: Date,
+    type: String,
     label: "Date Inspected", 
     autoform: {
-            
-        }
+            type: 'masked-input'
+          }
   },
   dateofloss: {
     type: Date,
@@ -128,4 +140,5 @@ Template.NewAssignment.helpers({
       }
 
 });
+
 
