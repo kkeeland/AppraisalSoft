@@ -33,6 +33,11 @@ Template.tabcontent.helpers({
         } 
       ]
     };
+  }, 
+  today: function(){
+    var today = new Date();
+    console.log(today);
+    return today;
   }
 
 

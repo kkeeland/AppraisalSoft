@@ -26,17 +26,17 @@ Schemas.Claim = new SimpleSchema({
         }
   },
   dateofinspection: {
-    type: String,
+    type: Date,
     label: "Date Inspected", 
     autoform: {
-            type: 'masked-input'
+            type: 'bootstrap-datepicker'
           }
   },
   dateofloss: {
     type: Date,
     label: "Date Recieved", 
     autoform: {
-            
+            type: 'bootstrap-datepicker'
         }
   },
   policyNumber: {
@@ -51,7 +51,7 @@ Schemas.Claim = new SimpleSchema({
     type: Date,
     label: "Date Recieved", 
     autoform: {
-            
+            type: 'bootstrap-datepicker'
         }
   },
   index: {

@@ -38,7 +38,7 @@
         <div class="form-group {{#if afFieldIsInvalid name='date_recieved'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Date Recieved</label>
           <div class="col-md-3">
-            {{> afFieldInput id='date_recieved' placeholder=now type='date' name='date_recieved'}} {{#if afFieldIsInvalid name='date_recieved'}}
+            {{> afFieldInput id='date_recieved' value='today' type='bootstrap-datepicker' buttonClasses='glyphicon glyphicon-calendar' name='date_recieved'}} {{#if afFieldIsInvalid name='date_recieved'}}
             <span class="help-block">{{{afFieldMessage name='date_recieved'}}}</span> {{/if}}
           </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="form-group {{#if afFieldIsInvalid name='dateofloss'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Date of Loss</label>
           <div class="col-md-3">
-            {{> afFieldInput id='dateofloss' placeholder='now' type='date' name='dateofloss'}} {{#if afFieldIsInvalid name='dateofloss'}}
+            {{> afFieldInput id='dateofloss' value='today' type='bootstrap-datepicker' buttonClasses='glyphicon glyphicon-calendar' name='dateofloss'}} {{#if afFieldIsInvalid name='dateofloss'}}
             <span class="help-block">{{{afFieldMessage name='dateofloss'}}}</span> {{/if}}
           </div>
         </div>
@@ -79,19 +79,19 @@
          <div class="form-group {{#if afFieldIsInvalid name='dateofinspection'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Date of Inspection</label>
           <div class="col-md-3">
-            {{> afFieldInput id='dateofinspection' type='masked-input' name='dateofinspection'}} {{#if afFieldIsInvalid name='dateofinspection'}}
+            {{> afFieldInput id='dateofinspection' value='today' type='bootstrap-datepicker' buttonClasses='glyphicon glyphicon-calendar' name='dateofinspection'}} {{#if afFieldIsInvalid name='dateofinspection'}}
             <span class="help-block">{{{afFieldMessage name='dateofinspection'}}}</span> {{/if}}
           </div>
         </div>
 
       </div>
 
-
       <!-- end of row 2 -->
 
       <!-- start of row 3 -->
 
       <div class="row spacethebottom">
+        {{dateoftheday}}
 
         <div class="form-group {{#if afFieldIsInvalid name='insuredName'}}has-error{{/if}}">
           <label class="col-md-1 control-label">Insured's Name</label>
