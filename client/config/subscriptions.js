@@ -4,3 +4,4 @@ Meteor.subscribe('appraisers');
 Meteor.subscribe('people');
 Meteor.subscribe('insuranceprofiles');
 Meteor.subscribe('indexid');
+Meteor.subscribe('shops');

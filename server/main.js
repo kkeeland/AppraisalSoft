@@ -21,3 +21,7 @@ Meteor.publish('insuranceprofiles', function () {
 Meteor.publish('claims', function () {
   return Claims.find();
 });
+
+Meteor.publish('shops', function () {
+  return Shops.find();
+});

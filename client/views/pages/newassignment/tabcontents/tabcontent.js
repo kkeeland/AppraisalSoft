@@ -18,16 +18,16 @@ Template.tabcontent.helpers({
     var uniqueindexnum = Session.get('uniqueindex');
     return uniqueindexnum;
   }, 
-  // TEMP CONNECTION TO APPRAISER DB/NEED TO MAKE SHOP DB AND ADD FUNCTION/MODAL
+  // TEMP CONNECTION TO CLAIMS INDEX DB/NEED TO MAKE SHOP DB AND ADD FUNCTION/MODAL
   settings : function() {
     return {
       position: "bottom",
-      limit: 10, 
+      limit: 3, 
       rules: [
         {
           // token: '',
-          collection: Appraisers,
-          field: 'appraisername',
+          collection: Shops,
+          field: 'name',
           matchAll: true,
           template: Template.shopnamePill
         } 
@@ -38,6 +38,9 @@ Template.tabcontent.helpers({
     var today = new Date();
     console.log(today);
     return today;
+  }, 
+  shops: function(){
+    return Shops.find();
   }
 
 
@@ -48,7 +51,7 @@ Template.tabcontent.helpers({
 var hooksObject = {
   onSuccess: function (addClaimdata, doc) {
     var uniqueindexnum = Session.get('uniqueindex');
-    swal("Jay!", "Successfully inserted a new index: " + uniqueindexnum, "success")
+    swal("Successful Entry!", "Successfully inserted a new index: " + uniqueindexnum, "success")
 
   }
 
@@ -70,7 +73,6 @@ Template.tabcontent.events({
     //SET THE SESSION VARIABLE FOR INSURANCE SUFFIX E.G, ALO FOR AMICA
     Session.set('index-id', insuranceID);
     console.log(Session.get('index-id'));
-
 
     //increase the seq number by one
     increaseIndexOne();

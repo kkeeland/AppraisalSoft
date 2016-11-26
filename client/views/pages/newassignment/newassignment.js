@@ -8,8 +8,19 @@ Template.registerHelper("Schemas", Schemas);
 
 
 Schemas.Claim = new SimpleSchema({
+  author: {
+    type:String, 
+    label: "Author",
+    autoValue: function(){
+      return "21";
+    },
+    autoform:{
+    
+    }
+  },
   shopname: {
     type: String, 
+    optional:true,
     label: "Shop Name", 
     autoform:{
       afFieldInput: {
