@@ -36,3 +36,6 @@ mpowaga:autoform-autocomplete
 mizzao:autocomplete
 codechimp:autoform-masked-input
 aldeed:autoform-bs-datepicker
+comerc:autoform-selectize
+jamiecollinson:selectize-bootstrap
+reactive-var

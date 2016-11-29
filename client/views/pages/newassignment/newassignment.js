@@ -1,3 +1,82 @@
+// states array
+
+var states = [
+{"LABEL":"Alabama","VALUE":"AL"},
+{"LABEL":"Alaska","VALUE":"AK"},
+{"LABEL":"Alberta","VALUE":"AB"},
+{"LABEL":"American Samoa","VALUE":"AS"},
+{"LABEL":"Arizona","VALUE":"AZ"},
+{"LABEL":"Arkansas","VALUE":"AR"},
+{"LABEL":"Armed Forces (AE)","VALUE":"AE"},
+{"LABEL":"Armed Forces Americas","VALUE":"AA"},
+{"LABEL":"Armed Forces Pacific","VALUE":"AP"},
+{"LABEL":"British Columbia","VALUE":"BC"},
+{"LABEL":"California","VALUE":"CA"},
+{"LABEL":"Colorado","VALUE":"CO"},
+{"LABEL":"Connecticut","VALUE":"CT"},
+{"LABEL":"Delaware","VALUE":"DE"},
+{"LABEL":"District Of Columbia","VALUE":"DC"},
+{"LABEL":"Florida","VALUE":"FL"},
+{"LABEL":"Georgia","VALUE":"GA"},
+{"LABEL":"Guam","VALUE":"GU"},
+{"LABEL":"Hawaii","VALUE":"HI"},
+{"LABEL":"Idaho","VALUE":"ID"},
+{"LABEL":"Illinois","VALUE":"IL"},
+{"LABEL":"Indiana","VALUE":"IN"},
+{"LABEL":"Iowa","VALUE":"IA"},
+{"LABEL":"Kansas","VALUE":"KS"},
+{"LABEL":"Kentucky","VALUE":"KY"},
+{"LABEL":"Louisiana","VALUE":"LA"},
+{"LABEL":"Maine","VALUE":"ME"},
+{"LABEL":"Manitoba","VALUE":"MB"},
+{"LABEL":"Maryland","VALUE":"MD"},
+{"LABEL":"Massachusetts","VALUE":"MA"},
+{"LABEL":"Michigan","VALUE":"MI"},
+{"LABEL":"Minnesota","VALUE":"MN"},
+{"LABEL":"Mississippi","VALUE":"MS"},
+{"LABEL":"Missouri","VALUE":"MO"},
+{"LABEL":"Montana","VALUE":"MT"},
+{"LABEL":"Nebraska","VALUE":"NE"},
+{"LABEL":"Nevada","VALUE":"NV"},
+{"LABEL":"New Brunswick","VALUE":"NB"},
+{"LABEL":"New Hampshire","VALUE":"NH"},
+{"LABEL":"New Jersey","VALUE":"NJ"},
+{"LABEL":"New Mexico","VALUE":"NM"},
+{"LABEL":"New York","VALUE":"NY"},
+{"LABEL":"Newfoundland","VALUE":"NF"},
+{"LABEL":"North Carolina","VALUE":"NC"},
+{"LABEL":"North Dakota","VALUE":"ND"},
+{"LABEL":"Northwest Territories","VALUE":"NT"},
+{"LABEL":"Nova Scotia","VALUE":"NS"},
+{"LABEL":"Nunavut","VALUE":"NU"},
+{"LABEL":"Ohio","VALUE":"OH"},
+{"LABEL":"Oklahoma","VALUE":"OK"},
+{"LABEL":"Ontario","VALUE":"ON"},
+{"LABEL":"Oregon","VALUE":"OR"},
+{"LABEL":"Pennsylvania","VALUE":"PA"},
+{"LABEL":"Prince Edward Island","VALUE":"PE"},
+{"LABEL":"Puerto Rico","VALUE":"PR"},
+{"LABEL":"Quebec","VALUE":"PQ"},
+{"LABEL":"Rhode Island","VALUE":"RI"},
+{"LABEL":"Saskatchewan","VALUE":"SK"},
+{"LABEL":"South Carolina","VALUE":"SC"},
+{"LABEL":"South Dakota","VALUE":"SD"},
+{"LABEL":"Tennessee","VALUE":"TN"},
+{"LABEL":"Texas","VALUE":"TX"},
+{"LABEL":"Utah","VALUE":"UT"},
+{"LABEL":"Vermont","VALUE":"VT"},
+{"LABEL":"Virgin Islands","VALUE":"VI"},
+{"LABEL":"Virginia","VALUE":"VA"},
+{"LABEL":"Washington","VALUE":"WA"},
+{"LABEL":"West Virginia","VALUE":"WV"},
+{"LABEL":"Wisconsin","VALUE":"WI"},
+{"LABEL":"Wyoming","VALUE":"WY"},
+{"LABEL":"Yukon Territory","VALUE":"YT"}
+]
+
+// end states [object]
+
+
 //autoform hooks obj for on success function
 
 var hooksObject = {
@@ -46,11 +125,100 @@ Schemas.Claim = new SimpleSchema({
     }
 
   },
+  insuredState: {
+    type: String,
+    autoform: {
+      type: "selectize",
+      afFieldInput: {
+        firstOption: "Oregon"
+      },
+      options: function () {
+        var opts = states.map(function (entity) {
+          return {
+            label: entity.LABEL,
+            value: entity.VALUE
+          };
+        });
+
+        return opts;
+      },
+      selectizeOptions: {
+        
+      }
+    }
+
+  },
+  insuredCity: {
+    type: String,
+    label: "Insured City",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  insuredZip: {
+    type: String,
+    label: "Insured Zip",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  insuredAddress1: {
+    type: String,
+    label: "Insured Address",
+    optional: true,
+    autoform: {
+
+    }
+  },
+   insuredAddress2: {
+    type: String,
+    label: "Insured Address 2",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  insuredEmail: {
+    type: String,
+    label: "Insured Email",
+    regEx: SimpleSchema.RegEx.Email,
+    optional: true,
+    autoform: {
+
+    }
+  },
   insuredName: {
     type: String,
     label: "Insured Name",
+    optional: true,
     autoform: {
 
+    }
+  },
+  insuredWorkphone: {
+    type: String,
+    label: "Insured Work Phone",
+    optional: true,
+    autoform: {
+      type: 'masked-input',
+      mask: '000-000-0000',
+      maskOptions: {
+        placeholder: '___-___-____'
+      }
+    }
+  },
+  insuredHomephone: {
+    type: String,
+    label: "Insured Home Phone",
+    optional: true,
+    autoform: {
+      type: 'masked-input',
+      mask: '000-000-0000',
+      maskOptions: {
+        placeholder: '___-___-____'
+      }
     }
   },
   dateofinspection: {
@@ -124,6 +292,102 @@ Schemas.Claim = new SimpleSchema({
           { label: "Liability", value: "liability" },
           { label: "Comprehensive", value: "comprehensive" }
         ];
+      }
+    }
+  },
+  claimantState: {
+    type: String,
+    autoform: {
+      type: "selectize",
+      afFieldInput: {
+        firstOption: "Oregon"
+      },
+      options: function () {
+        var opts = states.map(function (entity) {
+          return {
+            label: entity.LABEL,
+            value: entity.VALUE
+          };
+        });
+
+        return opts;
+      },
+      selectizeOptions: {
+        
+      }
+    }
+
+  },
+  claimantCity: {
+    type: String,
+    label: "Insured City",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  claimantZip: {
+    type: String,
+    label: "Insured Zip",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  claimantAddress1: {
+    type: String,
+    label: "Insured Address",
+    optional: true,
+    autoform: {
+
+    }
+  },
+   claimantdAddress2: {
+    type: String,
+    label: "Claimant Address 2",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  claimantEmail: {
+    type: String,
+    label: "Insured Email",
+    regEx: SimpleSchema.RegEx.Email,
+    optional: true,
+    autoform: {
+
+    }
+  },
+  claimantName: {
+    type: String,
+    label: "Claimant Name",
+    optional: true,
+    autoform: {
+
+    }
+  },
+  claimantWorkphone: {
+    type: String,
+    label: "Claimant Work Phone",
+    optional: true,
+    autoform: {
+      type: 'masked-input',
+      mask: '000-000-0000',
+      maskOptions: {
+        placeholder: '___-___-____'
+      }
+    }
+  },
+  claimantHomephone: {
+    type: String,
+    label: "Claimant Home Phone",
+    optional: true,
+    autoform: {
+      type: 'masked-input',
+      mask: '000-000-0000',
+      maskOptions: {
+        placeholder: '___-___-____'
       }
     }
   },

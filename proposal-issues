@@ -1,0 +1,29 @@
+Things I don't see on proposal breakdown:
+
+Email handling 
+    Sending email notifications for events 
+
+Employee Messegenger 
+    I see a graphic showing "Messaging" but no development time for this on estimate
+
+Supplement Reports & Appraiser Reports
+Image Handling 
+    I see "image upload Api" but do not see the developement time for tools to organize images or tools to create image reports.
+
+Items listed that are pre-baked into Meteor 
+    Account Management - basic level 
+
+
+Multi-Tenancy vs. Unique Databases 
+    Running multiple offices under this software requires a major decision to be made about Database structure:
+
+            Single Database per Office 
+                    Pros: Scale as needed per office growth, issues are isolate
+                    Cons: Updates require updating ALL offices databases individually (WAY MORE COST), Each database requires maintence individually, 
+                            each time there is a new office it would require building a new DB each time. 
+            Multiple offices on one sharded database 
+                    Pros: It can be scaled up by adding more databases that are replications of the first, low cost to maintain, low cost to upgrade, 
+                    low cost in general. 
+                    Cons: Cant easily put offices on their own DB if they grow faster than other offices, all offices are forced to use the same technology (not a huge issue)
+
+

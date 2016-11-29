@@ -1,7 +1,11 @@
+
+
+
 Claims: (Collection)
 	
 	ObjectID
 	////////General Info 
+										OfficeID
 	//Claim Number (String)
 	//Policy Number (String)
 	//Index Number (String)
@@ -10,18 +14,22 @@ Claims: (Collection)
 	//Type of Loss (COLL, COMP, LIAB) (Select String)
 	//Date Requested 	(Date)
 	//Date Inspected	(Date)
-	Insured Name	
-	Insured Home Phone
-	Insured Work Phone	
-	Insured Other Number	
-	Insured Email	
-	Insured Address	
-	Claimant Name
-	Claimant Home Phone
-	Claimant Work Phone	
-	Claimant Other Number	
-	Claimant Email	
-	Claimant Address
+	
+	//Insured Name	
+	//Insured Home Phone
+	//Insured Work Phone	
+	//Insured Other Number	
+	//Insured Email	
+	//Insured Address	
+	
+	//Claimant Name
+	//Claimant Home Phone
+	//Claimant Work Phone	
+	//Claimant Other Number	
+	//Claimant Email	
+	//Claimant Address
+
+
 
 	////////Vehicle Info 
 

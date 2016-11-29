@@ -25,7 +25,7 @@ Meteor.methods({
 
 
         console.log("Adding", doc);
-        Claims.insert(doc, function (err, docID) { console.log("DocID: ", docID); });
+        Claims.insert(doc, {validate: false}, function (err, docID) { console.log("DocID: ", docID); });
 
     }
 })
