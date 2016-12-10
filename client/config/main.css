@@ -3,3 +3,39 @@ hr {
     margin-bottom:20px;
     margin-top:0px;
 }
+.indexnumber {
+    background-color: #1f85c4;
+    color: white;
+    padding-bottom: 7px;
+    border-radius: 15px;
+}
+h2 {
+    padding:10px;
+    margin-bottom:25px;
+}
+.h2heading {
+    background-color:#f4f6fa;
+}
+#insuredsinformation [data-toggle="collapse"]:after
+{
+	font-family: 'Glyphicons Halflings';
+	content: "\e072";
+	float: right;
+	color: #000;
+	font-size: 18px;
+	line-height: 22px;
+
+	-webkit-transform: rotate(-90deg);
+	-moz-transform:    rotate(-90deg);
+	-ms-transform:     rotate(-90deg);
+	-o-transform:      rotate(-90deg);
+	transform:         rotate(-90deg);
+}
+#insuredsinformation [data-toggle="collapse"].collapsed:after
+{
+	-webkit-transform: rotate(90deg);
+	-moz-transform:    rotate(90deg);
+	-ms-transform:     rotate(90deg);
+	-o-transform:      rotate(90deg);
+	transform:         rotate(90deg);
+}

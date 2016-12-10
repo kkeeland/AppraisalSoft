@@ -9,7 +9,7 @@
         </div>
 
 
-        <div class="pull-right index-style col-md-2 col-xs-12">
+        <div class="pull-right index-style col-md-2 col-xs-12 indexnumber">
           <h1 class="text-center" style="margin-top:15px;font-weight:700;">
             {{#if uniqueindex}} {{uniqueindex}} {{else}} 0000000 {{/if}}
 
@@ -32,9 +32,9 @@
         <div class="tab-content">
           <div id="general" class="tab-pane fade in active">
 
-            <h2>General Information</h2>
+            <h2 class="h2heading">General Information</h2>
 
-            <hr>
+
             <!-- Start of Tab -->
 
             <div id="generalinformation" class="collapse in">
@@ -131,10 +131,9 @@
 
               <!-- start of row 3 -->
               <a href="#insuredsinformation" data-toggle="collapse">
-                <h3 class="">Insured's Information</h3>
+                <h2 class="h2heading">Insured's Information</h2>
               </a>
-              <hr>
-              <div id="insuredsinformation" class="collapse">
+              <div id="insuredsinformation" data-parent="#accordion" class="collapse">
                 <div class="row spacethebottom">
 
                   <div class="form-group {{#if afFieldIsInvalid name='insuredName'}}has-error{{/if}}">
@@ -162,7 +161,6 @@
                       <span class="help-block">{{{afFieldMessage name='insuredWorkphone'}}}</span> {{/if}}
                     </div>
                   </div>
-                  {{> afFieldInput id='author' type='hidden' value="Kevin" name='author'}}
                 </div>
                 <!-- end of row 3 -->
 
@@ -236,9 +234,8 @@
 
               <!-- start of row 5 -->
               <a href="#claimantsinformation" data-toggle="collapse">
-                <h3 class="">Claimant's Information</h3>
+                <h2 class="h2heading">Claimant's Information</h2>
               </a>
-              <hr>
               <div id="claimantsinformation" class="collapse">
                 <div class="row spacethebottom">
 
@@ -338,21 +335,7 @@
               </div>
               <!-- end of collapse-->
 
-              <!-- start of row 8-->
 
-              <div class="row spacethebottom">
-
-                <div class="form-group {{#if afFieldIsInvalid name='shopname'}}has-error{{/if}}">
-                  <label class="col-md-1 control-label">Shops's Name</label>
-                  <div class="col-md-3">
-                    {{> afFieldInput id='shopname' type='autocomplete-input' settings=settings autocomplete="off" class="form-control" name='shopname'}}
-                    {{#if afFieldIsInvalid name='shopname'}}
-                    <span class="help-block">{{{afFieldMessage name='shopname'}}}</span> {{/if}}
-                  </div>
-                </div>
-
-              </div>
-              <!-- end of row 8 -->
               <!-- Start of index number row -->
 
               <div class="row spacethebottom">
@@ -408,22 +391,29 @@
           <!-- Start of Tab 2 -->
 
           <div id="vehicle" class="tab-pane fade">
-            <a href="#vehicleinformation" data-toggle="collapse">
-              <h2>Vehicle Information</h2>
-            </a>
-            <!-- Start of Tab -->
 
+            <h2>Vehicle Information</h2>
+            <!-- Start of Tab -->
             <div id="vehicleinformation" class="collapse in">
-              test
+
+              
+              
             </div>
 
           </div>
+
+
           <!-- end of tab2 -->
+
+
+
+
           <!-- Start of Tab 3 -->
 
           <div id="invoice" class="tab-pane fade">
             <h3>Menu 2</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            </p>
           </div>
 
           <!-- end of tab3 -->

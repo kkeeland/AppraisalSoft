@@ -7,25 +7,18 @@ Meteor.methods({
         var ret = IndexID.update({ _id: "uAwxBjaee7y3b2yhk" }, {
             $inc: { seq: 1 }
         })
-         return ret.seq;
-
+        return ret.seq;
     },
 
     // method to add inputs from New Assignment page into DB 
 
     'addClaimdata': function (doc) {
-
-
-        //maybe create a helper that changes the date to UTC before submitting to DB.
-
         console.log("Adding", doc.appraisersOption);
         doc.createdAt = (new Date());
-
-        // TO DO: Add a method function that inserts the author of the index when its created. 
-
-
+        doc.createdBy = this.userId;
+        doc.currentStep = "step2";
         console.log("Adding", doc);
-        Claims.insert(doc, {validate: false}, function (err, docID) { console.log("DocID: ", docID); });
-
+        Claims.insert(doc, function (err, docID) { console.log("DocID: ", docID); });
     }
 })
+

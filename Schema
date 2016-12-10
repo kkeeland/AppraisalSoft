@@ -29,9 +29,7 @@ Claims: (Collection)
 	//Claimant Email	
 	//Claimant Address
 
-
-
-	////////Vehicle Info 
+////////Vehicle Info 
 
 	Vehicle Year (Date: year)
 	Vehicle Make (String)
@@ -45,14 +43,16 @@ Claims: (Collection)
 	Location of Type (Business, Residence, Shop, Other) (Select String)
 	Appraisal Address (String)
 	
-	Shop Name (option from Shop Collection)   <-- Drop Down Searchable
-
-	Location Phone (string)
-	Location Fax (string)
-	Location Address (string)
-	Location City
-	Location State 
-	Location Email
+	
+			Shop Name (option from Shop Collection)   <-- Drop Down Searchable
+			Location Phone (string)
+			Location Fax (string)
+			Location Address (string)
+			Location City
+			Location State 
+			Location Email
+	
+	
 	Area of Damage (Front, Rear, Left Side, Right Side, Roll/Roof, Under, Fire, Comp) (select)
 	Summary of Loss (string)
 	Special Instructions (string)
@@ -94,6 +94,7 @@ Install Process
 	
 
 
+Activity Feed Information 
 
 
 
@@ -130,3 +131,32 @@ Install Process
 
 
 
+
+
+
+
+
+
+
+
+
+<div class="row spacethebottom">
+                <div class="form-group {{#if afFieldIsInvalid name='shopname'}}has-error{{/if}}">
+                  <label class="col-md-1 control-label">Shops's Name</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput id='shopname' type='autocomplete-input' settings=settings autocomplete="off" class="form-control" name='shopname'}}
+                    {{#if afFieldIsInvalid name='shopname'}}
+                    <span class="help-block">{{{afFieldMessage name='shopname'}}}</span> {{/if}}
+                  </div>
+                </div>
+
+
+
+
+<a href="#vehicleinformation" data-toggle="collapse">
+              <h2>Vehicle Information</h2>
+            </a>
+            <!-- Start of Tab -->
+            <div id="vehicleinformation" class="collapse in">
+              {{#autoForm id="vehicleentry" type="method" schema=Schema.Vehicle collection="Claims" meteormethod="addClaimdata"}} {/autoForm}
+            </div>

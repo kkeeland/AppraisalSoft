@@ -1,77 +1,77 @@
 // states array
 
 var states = [
-{"LABEL":"Alabama","VALUE":"AL"},
-{"LABEL":"Alaska","VALUE":"AK"},
-{"LABEL":"Alberta","VALUE":"AB"},
-{"LABEL":"American Samoa","VALUE":"AS"},
-{"LABEL":"Arizona","VALUE":"AZ"},
-{"LABEL":"Arkansas","VALUE":"AR"},
-{"LABEL":"Armed Forces (AE)","VALUE":"AE"},
-{"LABEL":"Armed Forces Americas","VALUE":"AA"},
-{"LABEL":"Armed Forces Pacific","VALUE":"AP"},
-{"LABEL":"British Columbia","VALUE":"BC"},
-{"LABEL":"California","VALUE":"CA"},
-{"LABEL":"Colorado","VALUE":"CO"},
-{"LABEL":"Connecticut","VALUE":"CT"},
-{"LABEL":"Delaware","VALUE":"DE"},
-{"LABEL":"District Of Columbia","VALUE":"DC"},
-{"LABEL":"Florida","VALUE":"FL"},
-{"LABEL":"Georgia","VALUE":"GA"},
-{"LABEL":"Guam","VALUE":"GU"},
-{"LABEL":"Hawaii","VALUE":"HI"},
-{"LABEL":"Idaho","VALUE":"ID"},
-{"LABEL":"Illinois","VALUE":"IL"},
-{"LABEL":"Indiana","VALUE":"IN"},
-{"LABEL":"Iowa","VALUE":"IA"},
-{"LABEL":"Kansas","VALUE":"KS"},
-{"LABEL":"Kentucky","VALUE":"KY"},
-{"LABEL":"Louisiana","VALUE":"LA"},
-{"LABEL":"Maine","VALUE":"ME"},
-{"LABEL":"Manitoba","VALUE":"MB"},
-{"LABEL":"Maryland","VALUE":"MD"},
-{"LABEL":"Massachusetts","VALUE":"MA"},
-{"LABEL":"Michigan","VALUE":"MI"},
-{"LABEL":"Minnesota","VALUE":"MN"},
-{"LABEL":"Mississippi","VALUE":"MS"},
-{"LABEL":"Missouri","VALUE":"MO"},
-{"LABEL":"Montana","VALUE":"MT"},
-{"LABEL":"Nebraska","VALUE":"NE"},
-{"LABEL":"Nevada","VALUE":"NV"},
-{"LABEL":"New Brunswick","VALUE":"NB"},
-{"LABEL":"New Hampshire","VALUE":"NH"},
-{"LABEL":"New Jersey","VALUE":"NJ"},
-{"LABEL":"New Mexico","VALUE":"NM"},
-{"LABEL":"New York","VALUE":"NY"},
-{"LABEL":"Newfoundland","VALUE":"NF"},
-{"LABEL":"North Carolina","VALUE":"NC"},
-{"LABEL":"North Dakota","VALUE":"ND"},
-{"LABEL":"Northwest Territories","VALUE":"NT"},
-{"LABEL":"Nova Scotia","VALUE":"NS"},
-{"LABEL":"Nunavut","VALUE":"NU"},
-{"LABEL":"Ohio","VALUE":"OH"},
-{"LABEL":"Oklahoma","VALUE":"OK"},
-{"LABEL":"Ontario","VALUE":"ON"},
-{"LABEL":"Oregon","VALUE":"OR"},
-{"LABEL":"Pennsylvania","VALUE":"PA"},
-{"LABEL":"Prince Edward Island","VALUE":"PE"},
-{"LABEL":"Puerto Rico","VALUE":"PR"},
-{"LABEL":"Quebec","VALUE":"PQ"},
-{"LABEL":"Rhode Island","VALUE":"RI"},
-{"LABEL":"Saskatchewan","VALUE":"SK"},
-{"LABEL":"South Carolina","VALUE":"SC"},
-{"LABEL":"South Dakota","VALUE":"SD"},
-{"LABEL":"Tennessee","VALUE":"TN"},
-{"LABEL":"Texas","VALUE":"TX"},
-{"LABEL":"Utah","VALUE":"UT"},
-{"LABEL":"Vermont","VALUE":"VT"},
-{"LABEL":"Virgin Islands","VALUE":"VI"},
-{"LABEL":"Virginia","VALUE":"VA"},
-{"LABEL":"Washington","VALUE":"WA"},
-{"LABEL":"West Virginia","VALUE":"WV"},
-{"LABEL":"Wisconsin","VALUE":"WI"},
-{"LABEL":"Wyoming","VALUE":"WY"},
-{"LABEL":"Yukon Territory","VALUE":"YT"}
+  { "LABEL": "Alabama", "VALUE": "AL" },
+  { "LABEL": "Alaska", "VALUE": "AK" },
+  { "LABEL": "Alberta", "VALUE": "AB" },
+  { "LABEL": "American Samoa", "VALUE": "AS" },
+  { "LABEL": "Arizona", "VALUE": "AZ" },
+  { "LABEL": "Arkansas", "VALUE": "AR" },
+  { "LABEL": "Armed Forces (AE)", "VALUE": "AE" },
+  { "LABEL": "Armed Forces Americas", "VALUE": "AA" },
+  { "LABEL": "Armed Forces Pacific", "VALUE": "AP" },
+  { "LABEL": "British Columbia", "VALUE": "BC" },
+  { "LABEL": "California", "VALUE": "CA" },
+  { "LABEL": "Colorado", "VALUE": "CO" },
+  { "LABEL": "Connecticut", "VALUE": "CT" },
+  { "LABEL": "Delaware", "VALUE": "DE" },
+  { "LABEL": "District Of Columbia", "VALUE": "DC" },
+  { "LABEL": "Florida", "VALUE": "FL" },
+  { "LABEL": "Georgia", "VALUE": "GA" },
+  { "LABEL": "Guam", "VALUE": "GU" },
+  { "LABEL": "Hawaii", "VALUE": "HI" },
+  { "LABEL": "Idaho", "VALUE": "ID" },
+  { "LABEL": "Illinois", "VALUE": "IL" },
+  { "LABEL": "Indiana", "VALUE": "IN" },
+  { "LABEL": "Iowa", "VALUE": "IA" },
+  { "LABEL": "Kansas", "VALUE": "KS" },
+  { "LABEL": "Kentucky", "VALUE": "KY" },
+  { "LABEL": "Louisiana", "VALUE": "LA" },
+  { "LABEL": "Maine", "VALUE": "ME" },
+  { "LABEL": "Manitoba", "VALUE": "MB" },
+  { "LABEL": "Maryland", "VALUE": "MD" },
+  { "LABEL": "Massachusetts", "VALUE": "MA" },
+  { "LABEL": "Michigan", "VALUE": "MI" },
+  { "LABEL": "Minnesota", "VALUE": "MN" },
+  { "LABEL": "Mississippi", "VALUE": "MS" },
+  { "LABEL": "Missouri", "VALUE": "MO" },
+  { "LABEL": "Montana", "VALUE": "MT" },
+  { "LABEL": "Nebraska", "VALUE": "NE" },
+  { "LABEL": "Nevada", "VALUE": "NV" },
+  { "LABEL": "New Brunswick", "VALUE": "NB" },
+  { "LABEL": "New Hampshire", "VALUE": "NH" },
+  { "LABEL": "New Jersey", "VALUE": "NJ" },
+  { "LABEL": "New Mexico", "VALUE": "NM" },
+  { "LABEL": "New York", "VALUE": "NY" },
+  { "LABEL": "Newfoundland", "VALUE": "NF" },
+  { "LABEL": "North Carolina", "VALUE": "NC" },
+  { "LABEL": "North Dakota", "VALUE": "ND" },
+  { "LABEL": "Northwest Territories", "VALUE": "NT" },
+  { "LABEL": "Nova Scotia", "VALUE": "NS" },
+  { "LABEL": "Nunavut", "VALUE": "NU" },
+  { "LABEL": "Ohio", "VALUE": "OH" },
+  { "LABEL": "Oklahoma", "VALUE": "OK" },
+  { "LABEL": "Ontario", "VALUE": "ON" },
+  { "LABEL": "Oregon", "VALUE": "OR" },
+  { "LABEL": "Pennsylvania", "VALUE": "PA" },
+  { "LABEL": "Prince Edward Island", "VALUE": "PE" },
+  { "LABEL": "Puerto Rico", "VALUE": "PR" },
+  { "LABEL": "Quebec", "VALUE": "PQ" },
+  { "LABEL": "Rhode Island", "VALUE": "RI" },
+  { "LABEL": "Saskatchewan", "VALUE": "SK" },
+  { "LABEL": "South Carolina", "VALUE": "SC" },
+  { "LABEL": "South Dakota", "VALUE": "SD" },
+  { "LABEL": "Tennessee", "VALUE": "TN" },
+  { "LABEL": "Texas", "VALUE": "TX" },
+  { "LABEL": "Utah", "VALUE": "UT" },
+  { "LABEL": "Vermont", "VALUE": "VT" },
+  { "LABEL": "Virgin Islands", "VALUE": "VI" },
+  { "LABEL": "Virginia", "VALUE": "VA" },
+  { "LABEL": "Washington", "VALUE": "WA" },
+  { "LABEL": "West Virginia", "VALUE": "WV" },
+  { "LABEL": "Wisconsin", "VALUE": "WI" },
+  { "LABEL": "Wyoming", "VALUE": "WY" },
+  { "LABEL": "Yukon Territory", "VALUE": "YT" }
 ]
 
 // end states [object]
@@ -81,12 +81,24 @@ var states = [
 
 var hooksObject = {
   onSuccess: function (addClaimdata, doc) {
+
     var uniqueindexnum = Session.get('uniqueindex');
-    swal("Successful Entry!", "Successfully inserted a new index: " + uniqueindexnum, "success")
+    swal({ title: "Great! Vehicle Data Next...", text: "Successfully inserted a new index: " + uniqueindexnum, type: "success" }, function () {
+      //return the last claim of the current user id instead of all claims. 
+      var claim = Claims.findOne({user: this.userId});
+      //Open up the vehicle tab to blank information 
+      var ClaimURL = claim._id
+      ClaimURL = "/claim/" + ClaimURL
+      console.log(ClaimURL);
+      //Go to the route of the newly created index where you can edit 
+      FlowRouter.go(ClaimURL);
+
+    });
 
   }
-
 };
+
+
 
 
 //call autoform on success after insert in Claims db
@@ -104,16 +116,6 @@ Template.registerHelper("Schemas", Schemas);
 
 
 Schemas.Claim = new SimpleSchema({
-  author: {
-    type: String,
-    label: "Author",
-    autoValue: function () {
-      return "21";
-    },
-    autoform: {
-
-    }
-  },
   shopname: {
     type: String,
     optional: true,
@@ -143,7 +145,7 @@ Schemas.Claim = new SimpleSchema({
         return opts;
       },
       selectizeOptions: {
-        
+
       }
     }
 
@@ -172,7 +174,7 @@ Schemas.Claim = new SimpleSchema({
 
     }
   },
-   insuredAddress2: {
+  insuredAddress2: {
     type: String,
     label: "Insured Address 2",
     optional: true,
@@ -313,7 +315,7 @@ Schemas.Claim = new SimpleSchema({
         return opts;
       },
       selectizeOptions: {
-        
+
       }
     }
 
@@ -342,7 +344,7 @@ Schemas.Claim = new SimpleSchema({
 
     }
   },
-   claimantdAddress2: {
+  claimantdAddress2: {
     type: String,
     label: "Claimant Address 2",
     optional: true,
@@ -421,8 +423,29 @@ Template.registerHelper("Collections", Collections);
 
 Claims.attachSchema(Schemas.Claim);
 
-Template.NewAssignment.helpers({
+Schemas.Vehicle = new SimpleSchema({
+  shopname: {
+    type: String,
+    optional: true,
+    label: "Shop Name",
+    autoform: {
+      afFieldInput: {
+        type: 'autocomplete-input'
+      }
+    }
 
+  }
+});
+
+
+
+
+
+
+
+
+
+Template.NewAssignment.helpers({
   uniqueindex: function () {
     var insurancesuffix = Session.get('index-id');
     var uniqueindexnum = Session.get('index-number');
@@ -445,11 +468,10 @@ Template.NewAssignment.helpers({
     return Appraisers.find();
   },
   uniqueindexnum: function () {
-
     var uniqueindexnum = Session.get('uniqueindex');
     return uniqueindexnum;
   },
-  // TEMP CONNECTION TO CLAIMS INDEX DB/NEED TO MAKE SHOP DB AND ADD FUNCTION/MODAL
+  //  SHOP DB FOR AUTOCOMPLETE. NEED TO ADD FUNCTION/MODAL
   settings: function () {
     return {
       position: "bottom",
@@ -469,35 +491,31 @@ Template.NewAssignment.helpers({
     var today = new Date();
     console.log(today);
     return today;
-  },
-  shops: function () {
-    return Shops.find();
   }
 
 });
 
 
+
 Template.NewAssignment.events({
   //EVENTS WHEN CHANGE INSURANCE COMPANY
   'change #insurancecompany': function (event) {
-
+    
     //GRAB THE INFORMATION FROM THE DROPDOWN ON CHANGE
     var insuranceID = $("#insurancecompany :selected").val();
-
+    
     //SET THE SESSION VARIABLE FOR INSURANCE SUFFIX E.G, ALO FOR AMICA
     Session.set('index-id', insuranceID);
     console.log(Session.get('index-id'));
-
+   
     //increase the seq number by one
     increaseIndexOne();
-
     var indexNumber = IndexID.find().map(function (entity) {
       return entity.seq;
     });
     var indexNumber = indexNumber[0];
-
+   
     // SET SESSION VARIABLE FOR SEQUENCE NUMBER
-
     Session.set('index-number', indexNumber);
   },
 

@@ -1,4 +1,3 @@
-
 FlowRouter.route('/', {
     action: function () {
         FlowRouter.go('/dashboard');
@@ -6,6 +5,12 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/newassignment', {
+    action: function () {
+        BlazeLayout.render("mainLayout", { content: "NewAssignment" });
+    }
+});
+
+FlowRouter.route('/claim/:id', {
     action: function () {
         BlazeLayout.render("mainLayout", { content: "NewAssignment" });
     }
