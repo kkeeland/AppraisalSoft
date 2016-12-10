@@ -12,7 +12,7 @@ FlowRouter.route('/newassignment', {
 
 FlowRouter.route('/claim/:id', {
     action: function () {
-        BlazeLayout.render("mainLayout", { content: "NewAssignment" });
+        BlazeLayout.render("mainLayout", { content: "dashboard" });
     }
 });
 

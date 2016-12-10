@@ -9,12 +9,18 @@
 
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
-                    <div class="dropdown profile-element"> <span>
+                      
+
+                    <div class="dropdown profile-element">
+                        <img height="50px" src="http://www.iasclaimsgroup.com/wp-content/uploads/2013/10/logo.png">
+                        <br />
+                           <!-- <span>
                             <img alt="image" class="img-circle" src="img/profilepic.jpg" />
-                             </span>
+                             </span> -->
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Kevin Keeland</strong>
-                             </span> <span class="text-muted text-xs block">Staff Appraiser <b class="caret"></b></span> </span> </a>
+                             </span> <span class="text-muted text-xs block">Staff Appraiser <b class="caret"></b></span>                            </span>
+                        </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
                             <li><a href="profile">Profile</a></li>
                             <li><a href="contacts">Contacts</a></li>
@@ -22,14 +28,16 @@
                             <li class="divider"></li>
                             <li><a href="login">Logout</a></li>
                         </ul>
+
                     </div>
+
                     <div class="logo-element">
                         KK
                     </div>
                 </li>
                 <li class="{{isActivePath regex='dashboard'}}">
                     <a href="dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
-                    
+
                 </li>
                 <li class="{{isActivePath regex='/newassignment'}}">
                     <a href="{{urlFor '/NewAssignment'}}"><i class="fa fa-edit"></i> <span class="nav-label" data-i18n="nav.layouts">New Assignment</span> </a>
@@ -58,7 +66,7 @@
                 <li class="{{isActivePath regex='metrics'}}">
                     <a href="metrics"><i class="fa fa-database"></i> <span class="nav-label" data-i18n="nav.metrics">Settings</span> </a>
                 </li>
-                </ul>
+            </ul>
 
         </div>
     </nav>
