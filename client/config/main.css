@@ -4,7 +4,7 @@ hr {
     margin-top:0px;
 }
 .indexnumber {
-    background-color: #1f85c4;
+    background-color: #7d2e2c;
     color: white;
     padding-bottom: 7px;
     border-radius: 15px;
@@ -38,4 +38,13 @@ h2 {
 	-ms-transform:     rotate(90deg);
 	-o-transform:      rotate(90deg);
 	transform:         rotate(90deg);
+}
+.btn-primary {
+    background-color:#7d2e2c;
+    border-color: #7d2e2c;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:hover, .btn-primary.active:focus {
+  background-color: #735151;
+  border-color: #735151;
+  color: #FFFFFF;
 }
