@@ -27,6 +27,7 @@ codechimp:autoform-masked-input@0.0.1
 coffeescript@1.12.3_1
 comerc:autoform-selectize@2.3.2
 dandv:caret-position@2.1.1
+dangrossman:bootstrap-daterangepicker@2.1.13
 dbarrett:dropzonejs@3.10.3
 ddp@1.2.5
 ddp-client@1.3.3

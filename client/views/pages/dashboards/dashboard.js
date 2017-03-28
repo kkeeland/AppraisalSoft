@@ -11,3 +11,11 @@ Template.dashboard.destroyed = function(){
     // Remove special class
     $('body').removeClass('light-navbar');
 };
+
+Template.dashboard.helpers({
+  now: function () {
+    var now = moment().format('MMMM Do, YYYY');
+    return now;
+    }
+
+});
