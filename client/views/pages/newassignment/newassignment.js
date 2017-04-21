@@ -411,6 +411,42 @@ Schemas.Claim = new SimpleSchema({
         return opts;
       }
     }
+  }, 
+  vehicleLocation: {
+    type: String,
+    optional: false,
+    autoform: {
+      type: "select",
+      afFieldInput: {
+        firstOption: "(Select Vehicle Location)"
+      },
+      options: function () {
+        return [
+          { label: "Insureds", value: "insureds" },
+          { label: "Claimants", value: "claimants" },
+          { label: "Shop", value: "shop" }, 
+          { label: "Other", value: "other" }
+        ];
+      }
+    }
+  }, 
+  locationType: {
+    type: String,
+    optional: false,
+    autoform: {
+      type: "select",
+      afFieldInput: {
+        firstOption: "(Select Location Type)"
+      },
+      options: function () {
+        return [
+          { label: "Business", value: "business" },
+          { label: "Residence", value: "residence" },
+          { label: "Shop", value: "shop" }, 
+          { label: "Other", value: "other" }
+        ];
+      }
+    }
   }
 
 });

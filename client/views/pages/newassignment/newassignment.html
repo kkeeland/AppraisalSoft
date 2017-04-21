@@ -392,12 +392,452 @@
 
           <div id="vehicle" class="tab-pane fade">
 
-            <h2>Vehicle Information</h2>
+            <h2 class="h2heading">Vehicle Information</h2>
             <!-- Start of Tab -->
-            <div id="vehicleinformation" class="collapse in">
+           <div id="vehicle" class="collapse in">
+              {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
+
+              <!-- Start of Row 1a -->
+
+              <div class="row spacethebottom">
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Vehicle Year</label>
+                  <div class="col-md-1">
+                    {{> afFieldInput id='vehicleYear' size='4' type='text' name='vehicleYear'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Make</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='make' type='text' name='make'}}
+                  </div>
+                </div>
+
+                 <div class="form-group">
+                  <label class="col-md-1 control-label">Model</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='model' type='text' name='model'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">License plate</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='licplate' type='text' name='licplate'}}
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- End of Row 1a -->
+
+              <!-- Start of Row 1b -->
+
+              <div class="row spacethebottom">
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Vehicle VIN</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput id='vehicleVIN' type='text' name='vehicleVIN'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Odometer</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='make' type='text' name='odometer'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Vehicle Color</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='vehicleColor' type='text' name='vehcileColor'}}
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- End of Row 1b -->
+
+               <!-- Start of Row 1c -->
+
+              <div class="row spacethebottom">
+
+
+                <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
+                  <label class="col-md-1 control-label">Vehicle Location</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='vehicleLocation'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Location Type</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='locationType'}}
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- End of Row 1c -->
+
+              <!-- Start of Row 1d -->
+
+              <div class="row spacethebottom">
+
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Vehicle Owner</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput id='vehicleOwner' type='text' name='vehicleOwner'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-1 control-label">Location Address</label>
+                  <div class="col-md-5">
+                    {{> afFieldInput id='locationAddress' type='text' name='locationAddress'}}
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- End of Row 1d -->
+              
+              <!-- start of row 3 -->
+              <a href="#shopinformation" data-toggle="collapse">
+                <h2 class="h2heading">Shop's Information</h2>
+              </a>
+              <div id="shopinformation" data-parent="#accordion" class="collapse">
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredName'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Name</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredName' type='text' name='insuredName'}} {{#if afFieldIsInvalid name='insuredName'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredName'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredWorkphone'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Work Phone</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredWorkphone' type='masked-input' name='insuredWorkphone' placeholder='___-___-____'}} {{#if afFieldIsInvalid
+                      name='insuredWorkphone'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredWorkphone'}}}</span> {{/if}}
+                    </div>
+                  </div>
+                </div>
+                <!-- end of row 3 -->
 
 
 
+                <!-- start of row 3a -->
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredAddress1'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Address</label>
+                    <div class="col-md-4">
+                      {{> afFieldInput id='insuredAddress1' type='text' name='insuredAddress1'}} {{#if afFieldIsInvalid name='insuredAddress1'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredAddress1'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredAddress2'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Suite/Apt</label>
+                    <div class="col-md-2">
+                      {{> afFieldInput id='insuredAddress2' type='text' name='insuredAddress2'}} {{#if afFieldIsInvalid name='insuredAddress2'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredAddress2'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredCity'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">City</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredCity' type='text' name='insuredCity'}} {{#if afFieldIsInvalid name='insuredCity'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredCity'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 3a -->
+
+
+
+                <!-- start of row 4 -->
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredState'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">State</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredState' type='selectize' value="OR" name='insuredState'}} {{#if afFieldIsInvalid name='insuredState'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredState'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredZip'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Postal Code</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredZip' type='text' name='insuredZip'}} {{#if afFieldIsInvalid name='insuredZip'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredZip'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredEmail'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Shop's Email</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredEmail' type='text' name='insuredEmail'}} {{#if afFieldIsInvalid name='insuredEmail'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredEmail'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 4 -->
+              </div>
+              <!-- end of collapse -->
+
+              <!-- start of row 5 -->
+              <a href="#otherinformation" data-toggle="collapse">
+                <h2 class="h2heading">Other Location Information</h2>
+              </a>
+              <div id="otherinformation" class="collapse">
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantName'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Name</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='claimantName' type='text' name='claimantName'}} {{#if afFieldIsInvalid name='claimantName'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantName'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantWorkphone'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label"> Phone</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='claimantWorkphone' type='masked-input' name='claimantWorkphone' placeholder='___-___-____'}} {{#if afFieldIsInvalid
+                      name='claimantWorkphone'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantWorkphone'}}}</span> {{/if}}
+                    </div>
+                  </div>
+                </div>
+                <!-- end of row 5 -->
+
+
+
+                <!-- start of row 6 -->
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantAddress1'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Address</label>
+                    <div class="col-md-4">
+                      {{> afFieldInput id='claimantAddress1' type='text' name='claimantAddress1'}} {{#if afFieldIsInvalid name='claimantAddress1'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantAddress1'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantAddress2'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Suite/Apt</label>
+                    <div class="col-md-2">
+                      {{> afFieldInput id='claimantAddress2' type='text' name='claimantAddress2'}} {{#if afFieldIsInvalid name='claimantAddress2'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantAddress2'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantCity'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">City</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='claimantCity' type='text' name='claimantCity'}} {{#if afFieldIsInvalid name='claimantCity'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantCity'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 6 -->
+
+
+
+                <!-- start of row 7 -->
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantState'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">State</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='claimantState' type='selectize' value="OR" name='claimantState'}} {{#if afFieldIsInvalid name='claimantState'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantState'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantZip'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Postal Code</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='claimantZip' type='text' name='claimantZip'}} {{#if afFieldIsInvalid name='claimantZip'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantZip'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='claimantEmail'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Email</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='claimantEmail' type='text' name='claimantEmail'}} {{#if afFieldIsInvalid name='claimantEmail'}}
+                      <span class="help-block">{{{afFieldMessage name='claimantEmail'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 7 -->
+              </div>
+              <!-- end of collapse-->
+
+              <!-- start of row 8 -->
+              <a href="#factsofloss" data-toggle="collapse">
+                <h2 class="h2heading">Facts of Loss</h2>
+              </a>
+              <div id="factsofloss" data-parent="#accordion" class="collapse">
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredName'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Name</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredName' type='text' name='insuredName'}} {{#if afFieldIsInvalid name='insuredName'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredName'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredWorkphone'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Work Phone</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredWorkphone' type='masked-input' name='insuredWorkphone' placeholder='___-___-____'}} {{#if afFieldIsInvalid
+                      name='insuredWorkphone'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredWorkphone'}}}</span> {{/if}}
+                    </div>
+                  </div>
+                </div>
+                <!-- end of row 8 -->
+
+
+
+                <!-- start of row 9 -->
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredAddress1'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Address</label>
+                    <div class="col-md-4">
+                      {{> afFieldInput id='insuredAddress1' type='text' name='insuredAddress1'}} {{#if afFieldIsInvalid name='insuredAddress1'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredAddress1'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredAddress2'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Suite/Apt</label>
+                    <div class="col-md-2">
+                      {{> afFieldInput id='insuredAddress2' type='text' name='insuredAddress2'}} {{#if afFieldIsInvalid name='insuredAddress2'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredAddress2'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredCity'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">City</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredCity' type='text' name='insuredCity'}} {{#if afFieldIsInvalid name='insuredCity'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredCity'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 9 -->
+
+
+
+                <!-- start of row 10 -->
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredState'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">State</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredState' type='selectize' value="OR" name='insuredState'}} {{#if afFieldIsInvalid name='insuredState'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredState'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredZip'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Postal Code</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredZip' type='text' name='insuredZip'}} {{#if afFieldIsInvalid name='insuredZip'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredZip'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+                  <div class="form-group {{#if afFieldIsInvalid name='insuredEmail'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Shop's Email</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput id='insuredEmail' type='text' name='insuredEmail'}} {{#if afFieldIsInvalid name='insuredEmail'}}
+                      <span class="help-block">{{{afFieldMessage name='insuredEmail'}}}</span> {{/if}}
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 10 -->
+              </div>
+              <!-- end of collapse -->
+
+
+              <!-- Start of index number row -->
+
+              <div class="row spacethebottom">
+
+                <!-- Is there a UNIQUE ID yet? if SO... show it -->
+
+                {{#if uniqueindexnum}}
+
+                <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
+                  <label class="col-md-1 control-label">Index Number</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='index' value=uniqueindexnum type='text' name='index' readonly=true}} {{#if afFieldIsInvalid name='index'}}
+                    <span class="help-block">{{{afFieldMessage name='index'}}}</span> {{/if}}
+                  </div>
+                </div>
+
+                <!-- Else show NO ID YET-->
+
+                {{else}}
+
+                <div class="form-group {{#if afFieldIsInvalid name='index'}}has-error{{/if}}">
+                  <label class="col-md-1 control-label">Index Number</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='index' value='NO INDEX # YET' type='text' name='index' readonly=true}} {{#if afFieldIsInvalid name='index'}}
+                    <span class="help-block">{{{afFieldMessage name='index'}}}</span> {{/if}}
+                  </div>
+                </div>
+                {{/if}}
+
+                <!-- end of Unique ID IF Statement -->
+
+              </div>
+              <!-- end of index number row -->
+
+              <!-- start of button -->
+
+              <div class="row spacethebottom">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- end of button -->
+
+              {{/autoForm}}
             </div>
 
           </div>
