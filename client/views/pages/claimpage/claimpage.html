@@ -1,18 +1,17 @@
-<template name="NewAssignment">
+<template name="Claimpage">
   <div id="page-content-wrapper">
     <div class="page-content" style="padding:20px;padding-top:10px;">
 
       <!-- new assignment header -->
       <div style="height:60px;">
         <div class="pull-left">
-          <h1>New Assignment</h1>
+          <h1></h1>
         </div>
 
 
         <div class="pull-right index-style col-md-2 col-xs-12 indexnumber">
           <h1 class="text-center" style="margin-top:15px;font-weight:700;">
-            {{#if uniqueindex}} {{uniqueindex}} {{else}} 0000000 {{/if}}
-
+             115122ALO
           </h1>
           <h3 class="text-center" style="margin-top: -15px;">INDEX NUMBER</h3>
         </div>
@@ -23,9 +22,12 @@
       <br/>
 
       <ul id="tabs" data-tabs="tabs" class="nav nav-tabs">
-        <li role="presentation" class="active"><a data-toggle="tab" href="#general">General Information</a></li>
-        <li role="presentation"><a data-toggle="tab" href="#vehicle">Vehicle Information</a></li>
+        <li role="presentation" class="active"><a data-toggle="tab" href="#general">General Info</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#vehicle">Vehicle Info</a></li>
         <li role="presentation"><a data-toggle="tab" href="#invoice">Invoice</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#imagemanager">Image/File Manager</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#appraiser">Appraiser Report</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#supplement">Supplement Report(s)</a></li>
       </ul>
 
       <div class=".col-md-12" style="background-color:white;padding:25px;">
@@ -999,6 +1001,25 @@
 
           </div>
           <!-- end of invoice-->
+
+          <!-- Start of image manager tab -->
+          <div id="imagemanager" class="tab-pane fade">
+          </div>
+
+          <!-- end image manager tab -->
+
+          <!-- Start of appraiser tab -->
+          <div id="appraiser" class="tab-pane fade">
+          </div>
+
+          <!-- end appraiser tab -->
+
+          <!-- Start of supp tab -->
+          <div id="supplement" class="tab-pane fade">
+          </div>
+
+          <!-- end supp tab -->
+
 
         </div>
         <!-- end of ALL TAB CONTENT -->

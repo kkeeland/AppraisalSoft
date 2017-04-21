@@ -43,27 +43,21 @@
                     <a href="{{urlFor '/NewAssignment'}}"><i class="fa fa-edit"></i> <span class="nav-label" data-i18n="nav.layouts">New Assignment</span> </a>
                 </li>
                 <li class="{{isActivePath regex='c3charts|graphFlot|graphMorris|graphRickshaw|graphChartJs|graphPeity|graphSparkline|graphChartist'}}">
-                    <a href="#"><i class="fa fa-money"></i> <span class="nav-label" data-i18n="nav.graphs">Billing</span><span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-money"></i> <span class="nav-label" data-i18n="nav.graphs">Billing Dashboard</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse {{isActivePath regex='c3charts|graphFlot|graphMorris|graphRickshaw|graphChartJs|graphPeity|graphSparkline|graphChartist' className='in'}}">
-                        <li class="{{isActivePath regex='/graphFlot'}}"><a href="graphFlot">Flot Charts</a></li>
-                        <li class="{{isActivePath regex='/graphRickshaw'}}"><a href="graphRickshaw">Rickshaw Charts</a></li>
-                        <li class="{{isActivePath regex='/graphChartJs'}}"><a href="graphChartJs">Chart.js</a></li>
-                        <li class="{{isActivePath regex='/graphChartist'}}"><a href="graphChartist">Chartist</a></li>
-                        <li class="{{isActivePath regex='/c3charts'}}"><a href="c3charts">c3 charts</a></li>
-                        <li class="{{isActivePath regex='/graphPeity'}}"><a href="graphPeity">Peity Charts</a></li>
-                        <li class="{{isActivePath regex='/graphSparkline'}}"><a href="graphSparkline">Sparkline Charts</a></li>
+                        <li class="{{isActivePath regex='/graphFlot'}}"><a href="graphFlot">Billing Reports</a></li>
                     </ul>
                 </li>
-                <!-- <li class="{{isActivePath regex='mailbox|emailView|emailCompose|emailTemplates'}}">
-                    <a href="#"><i class="fa fa-envelope"></i> <span class="nav-label" data-i18n="nav.mailbox">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                <li class="{{isActivePath regex='mailbox|emailView|emailCompose|emailTemplates'}}">
+                    <a href="#"><i class="fa fa-edit"></i> <span class="nav-label" data-i18n="nav.mailbox">Add New </span></a>
                     <ul class="nav nav-second-level collapse {{isActivePath regex='mailbox|emailView|emailCompose|emailTemplates' className='in'}}">
-                        <li class="{{isActivePath regex='/mailbox'}}"><a href="mailbox">Inbox</a></li>
-                        <li class="{{isActivePath regex='/emailView'}}"><a href="emailView">Email view</a></li>
-                        <li class="{{isActivePath regex='/emailCompose'}}"><a href="emailCompose">Compose email</a></li>
-                        <li class="{{isActivePath regex='/emailTemplates'}}"><a href="emailTemplates">Email templates</a></li>
+                        <li class="{{isActivePath regex='/mailbox'}}"><a href="mailbox">Add Insurance Company</a></li>
+                        <li class="{{isActivePath regex='/emailView'}}"><a href="emailView">Add New Appraiser</a></li>
+                        <li class="{{isActivePath regex='/emailCompose'}}"><a href="emailCompose">Add New Shop</a></li>
+                        <li class="{{isActivePath regex='/emailTemplates'}}"><a href="emailTemplates">Add New Adjuster</a></li>
                     </ul>
                 </li>
-                -->
+                
                 <li class="{{isActivePath regex='metrics'}}">
                     <a href="metrics"><i class="fa fa-database"></i> <span class="nav-label" data-i18n="nav.metrics">Settings</span> </a>
                 </li>

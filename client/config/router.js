@@ -22,6 +22,12 @@ FlowRouter.route('/dashboard', {
     }
 });
 
+FlowRouter.route('/claim', {
+    action: function () {
+        BlazeLayout.render("mainLayout", { content: "Claimpage" });
+    }
+});
+
 FlowRouter.route('/dashboard3', {
     action: function () {
         BlazeLayout.render("mainLayout", { content: "dashboard3" });

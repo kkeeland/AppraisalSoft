@@ -499,7 +499,7 @@ Schemas.Vehicle = new SimpleSchema({
 
 
 
-Template.NewAssignment.helpers({
+Template.Claimpage.helpers({
   uniqueindex: function () {
     var insurancesuffix = Session.get('index-id');
     var uniqueindexnum = Session.get('index-number');
