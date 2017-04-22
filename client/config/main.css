@@ -17,6 +17,11 @@ h2 {
 .h2heading {
     background-color:#f4f6fa;
 }
+.h2heading2{
+ 	background-color:#7d2e2c;
+	 width:300px;
+	 color:white;
+}
 #insuredsinformation [data-toggle="collapse"]:after
 {
 	font-family: 'Glyphicons Halflings';

@@ -498,6 +498,21 @@ Schemas.Claim = new SimpleSchema({
         ];
       }
     }
+  }, 
+   lkqparts: {
+    type: String,
+    optional: false,
+    autoform: {
+      type: "select",
+      afFieldInput: {
+        firstOption: "Select One"
+      },
+      options: function () {
+        return [
+          { label: "Keystone 1-800-123-1232", value: "business" }
+        ];
+      }
+    }
   }
 
 });
@@ -581,6 +596,10 @@ Template.Claimpage.helpers({
   }
 
 });
+
+Template.Claimpage.onRendered = function() {
+   $('#content').ckeditor();
+ };
 
 
 

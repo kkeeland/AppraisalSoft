@@ -1153,9 +1153,11 @@
             <h2 class="h2heading">Appraiser Report</h2>
 
             {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
+
+            <h2 class="h2heading2">Retail Book Value</h2>
             <div class="row spacethebottom">
 
-              <h3 class="margin-left:15px;margin-bottom:10px;">&nbsp; &nbsp; Retail Book Value</h3>
+
               <div class="row spacethebottom">
               </div>
               <!-- end of row  -->
@@ -1365,6 +1367,78 @@
 
               {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
 
+              <h2 class="h2heading2">Parts Information</h2>
+              <!-- Empty Row -->
+              <div class="row spacethebottom">
+              </div>
+              <!-- End of Empty Row -->
+              <div class="row spacethebottom">
+                <div class="form-group">
+                  <label class="col-md-2 control-label">LKQ Parts Available</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='lkqparts'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='lkqparts'}}
+                  </div>
+                </div>
+
+              </div>
+              <!-- end of row  -->
+
+              <div class="row spacethebottom">
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Aftermarket Parts Available</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='lkqparts'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='lkqparts'}}
+                  </div>
+                </div>
+
+              </div>
+              <!-- end of row  -->
+              <div class="row spacethebottom">
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Reconditioned Parts Available</label>
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='lkqparts'}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-3">
+                    {{> afFieldInput type='select' name='lkqparts'}}
+                  </div>
+                </div>
+
+              </div>
+              <!-- end of row  -->
+
+              <!-- Empty Row -->
+              <div class="row spacethebottom">
+              </div>
+              <!-- End of Empty Row -->
+              <!-- Empty Row -->
+              <div class="row spacethebottom">
+              </div>
+              <!-- End of Empty Row -->
+              <h2 class="h2heading2">Repair Information</h2>
+              <!-- Empty Row -->
+              <div class="row spacethebottom">
+              </div>
+              <!-- End of Empty Row -->
+
+
+
+
 
               <div class="row spacethebottom">
 
@@ -1481,13 +1555,62 @@
               </div>
               <!-- end of row  -->
 
-               <!-- Empty Row -->
+              <h2 class="h2heading2">UPD/Betterment</h2>
+              <div class="row spacethebottom">
+
+                <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
+                  <label class="col-md-3 control-label">Old Damages Predefined</label><a href="#">Add Comment</a>
+                  <div class="col-md-7">
+                    {{> afFieldInput type='select' name='predefinedappraisercomments'}}
+                  </div>
+                </div>
+              </div>
+              <!-- End of Row -->
+
+
+              <div class="row spacethebottom">
+                <label class="col-md-2 control-label">Old Damages</label>
+                <div class="col-md-6">
+                  <textarea rows="4" cols="60" id="content" name="content"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Total Old Damages</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='repaircost' type='text' value='0.00' name='repaircost'}}
+                  </div>
+                </div>
+
+              </div>
+              <!-- End of Row -->
+             <div class="row spacethebottom">
+                <label class="col-md-2 control-label">Betterment</label>
+                <div class="col-md-6">
+                  <textarea rows="4" cols="60" id="content" name="content"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 control-label">Total Betterment</label>
+                  <div class="col-md-2">
+                    {{> afFieldInput id='repaircost' type='text' value='0.00' name='repaircost'}}
+                  </div>
+                </div>
+
+              </div>
+              <!-- End of Row -->
+
+
+
+
+
+
+
+
+              <!-- Empty Row -->
               <div class="row spacethebottom">
               </div>
               <!-- End of Empty Row -->
 
-              
 
+              <h2 class="h2heading2">Appraiser Comments</h2>
               <div class="row spacethebottom">
 
                 <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
@@ -1495,6 +1618,17 @@
                   <div class="col-md-7">
                     {{> afFieldInput type='select' name='predefinedappraisercomments'}}
                   </div>
+                </div>
+              </div>
+              <!-- end of row  -->
+
+
+              <div class="row spacethebottom">
+                <div class="col-md-12">
+                  <h3>Appraiser Comments</h3>
+                </div>
+                <div class="col-md-12">
+                  <textarea rows="10" cols="150" id="content" name="content"></textarea>
                 </div>
               </div>
               <!-- end of row  -->
