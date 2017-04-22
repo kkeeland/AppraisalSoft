@@ -447,7 +447,40 @@ Schemas.Claim = new SimpleSchema({
         ];
       }
     }
-  }, 
+  },
+  officalguide: {
+    type: String,
+    optional: false,
+    autoform: {
+      type: "select",
+      afFieldInput: {
+        firstOption: "(Select Guide Used)"
+      },
+      options: function () {
+        return [
+          { label: "NADA", value: "business" },
+          { label: "Kelly Blue Book", value: "residence" },
+          { label: "Other", value: "other" }
+        ];
+      }
+    }
+  },
+  predefinedappraisercomments: {
+    type: String,
+    optional: false,
+    autoform: {
+      type: "select",
+      afFieldInput: {
+        firstOption: "Select Pre-defined Comment"
+      },
+      options: function () {
+        return [
+          { label: "The vehicles keys were not available during my inspection.", value: "nokeys" },
+          { label: "The car was blue.", value: "residence" }
+        ];
+      }
+    }
+  },
   predefinedServices: {
     type: String,
     optional: false,
