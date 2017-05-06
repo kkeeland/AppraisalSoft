@@ -429,7 +429,25 @@ Schemas.Claim = new SimpleSchema({
         ];
       }
     }
-  }, 
+  },
+  noteType: {
+    type: String,
+    optional: false,
+    autoform: {
+      type: "select",
+      afFieldInput: {
+        firstOption: "(Select Note Type)"
+      },
+      options: function () {
+        return [
+          { label: "Comment", value: "insureds" },
+          { label: "Appointment Set", value: "claimants" },
+          { label: "Delay Reason", value: "shop" }, 
+          { label: "Other", value: "other" }
+        ];
+      }
+    }
+  },
   locationType: {
     type: String,
     optional: false,

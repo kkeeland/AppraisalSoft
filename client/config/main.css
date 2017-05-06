@@ -1,7 +1,19 @@
 
+
+#sortable, #sortable2 { list-style-type: none; margin: 0; padding: 0;}
+ #sortable li {   text-align: center; }
+.imagemanagerbutton {
+	font-size:15px;
+}
 hr {
     margin-bottom:20px;
     margin-top:0px;
+}
+.top-buttons {
+	background-color: #747679;
+    color: white;
+	margin-top:30px;
+	margin-right:20px;
 }
 .indexnumber {
     background-color: #7d2e2c;

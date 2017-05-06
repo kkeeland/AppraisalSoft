@@ -4,10 +4,17 @@
 
       <!-- new assignment header -->
       <div style="height:60px;">
-        <div class="pull-left">
-          <h1></h1>
+        <div class="pull-left" style="margin-top:20px;">
+          <div class="btn-group">
+            <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" aria-expanded="false">File Menu <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="/emailCompose" class="font-bold">Email Adjuster</a></li>
+              <li><a href="#">Guidelines</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Create Reminder</a></li>
+            </ul>
+          </div>
         </div>
-
 
         <div class="pull-right index-style col-md-2 col-xs-12 indexnumber">
           <h1 class="text-center" style="margin-top:15px;font-weight:700;">
@@ -25,6 +32,7 @@
         <li role="presentation" class="active"><a data-toggle="tab" href="#general">General Info</a></li>
         <li role="presentation"><a data-toggle="tab" href="#vehicle">Vehicle Info</a></li>
         <li role="presentation"><a data-toggle="tab" href="#invoice">Invoice</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#timeline">File Notes</a></li>
         <li role="presentation"><a data-toggle="tab" href="#imagemanager">Image Manager</a></li>
         <li role="presentation"><a data-toggle="tab" href="#appraiser">Appraiser Report</a></li>
         <li role="presentation"><a data-toggle="tab" href="#supplement">Supplement Report(s)</a></li>
@@ -953,6 +961,7 @@
                 <div class="col-md-2">
                   {{> afFieldInput id='otherCost' type='text' name='otherCost'}}
                 </div>
+                - (Not Calculated as part of Appraiser Earnings)
               </div>
 
             </div>
@@ -1002,10 +1011,262 @@
           </div>
           <!-- end of invoice-->
 
+          <!-- Start of timeline tab -->
+
+          <div id="timeline" class="tab-pane fade">
+
+            <h2 class="h2heading">Timeline</h2>
+
+            {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
+
+            <!-- Start of Row -->
+
+            <div class="row spacethebottom">
+
+              <div class="col-lg-12">
+
+                <!-- Start of Row -->
+
+                <div class="row spacethebottom">
+
+
+                  <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
+                    <label class="col-md-1 control-label">Note Type:</label>
+                    <div class="col-md-3">
+                      {{> afFieldInput type='select' name='noteType'}}
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-1 control-label">Subject:</label>
+                    <div class="col-md-4">
+                      {{> afFieldInput id='serviceFee' type='text' name='serviceFee'}}
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+
+                <!-- End of Row -->
+
+                <!-- Empty Row -->
+                <div class="row spacethebottom">
+                </div>
+                <!-- End of Empty Row -->
+
+
+                <!-- start of row 9-->
+                <div class="row spacethebottom">
+
+
+                  <div class="form-group">
+                    <label class="col-md-12 control-label">Note:</label>
+                    <div class="col-md-12">
+                      <textarea rows="10" style="width:100%;" name="comment" form="usrform"></textarea>
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- end of row 9 -->
+
+
+
+
+                <div class="row spacethebottom">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary">Add Note</button>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+                <div class="ibox float-e-margins">
+                  <div class="pull-right"><button>Email PDF</button>&nbsp;<button>Print PDF</button></div>
+                  <div class="row spacethebottom">
+                  </div>
+
+                  <div class="ibox-content inspinia-timeline">
+
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-briefcase"></i> Wed, Apr 21
+                          <br> 6:00 am
+                          <br>
+                          <small class="text-navy">2 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content no-top-border">
+                          <p class="m-b-xs"><strong>Meeting</strong></p>
+
+                          <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing
+                            and products. Below please find the current status of the sale.
+                          </p>
+
+                          <p><span data-diameter="40" class="updating-chart" style="display: none;">5,10,6,4,4,1,0,8,2,3,8,1,1,7,8,3,7,6,3,5,9,7,5,6,7,0,9,9,6,4,4,9,3,6,10,2,9</span>
+                            <svg class="peity" height="16" width="64">
+                              <polygon fill="#1ab394" points="0 15 0 8 1.7777777777777777 0.5 3.5555555555555554 6.5 5.333333333333333 9.5 7.111111111111111 9.5 8.88888888888889 14 10.666666666666666 15.5 12.444444444444443 3.5 14.222222222222221 12.5 16 11 17.77777777777778 3.5 19.555555555555554 14 21.333333333333332 14 23.11111111111111 5 24.888888888888886 3.5 26.666666666666664 11 28.444444444444443 5 30.22222222222222 6.5 32 11 33.77777777777778 8 35.55555555555556 2 37.33333333333333 5 39.11111111111111 8 40.888888888888886 6.5 42.666666666666664 5 44.44444444444444 15.5 46.22222222222222 2 48 2 49.77777777777777 6.5 51.55555555555555 9.5 53.33333333333333 9.5 55.11111111111111 2 56.888888888888886 11 58.666666666666664 6.5 60.44444444444444 0.5 62.22222222222222 12.5 64 2 64 15"></polygon>
+                              <polyline fill="transparent" points="0 8 1.7777777777777777 0.5 3.5555555555555554 6.5 5.333333333333333 9.5 7.111111111111111 9.5 8.88888888888889 14 10.666666666666666 15.5 12.444444444444443 3.5 14.222222222222221 12.5 16 11 17.77777777777778 3.5 19.555555555555554 14 21.333333333333332 14 23.11111111111111 5 24.888888888888886 3.5 26.666666666666664 11 28.444444444444443 5 30.22222222222222 6.5 32 11 33.77777777777778 8 35.55555555555556 2 37.33333333333333 5 39.11111111111111 8 40.888888888888886 6.5 42.666666666666664 5 44.44444444444444 15.5 46.22222222222222 2 48 2 49.77777777777777 6.5 51.55555555555555 9.5 53.33333333333333 9.5 55.11111111111111 2 56.888888888888886 11 58.666666666666664 6.5 60.44444444444444 0.5 62.22222222222222 12.5 64 2"
+                                stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline>
+                            </svg>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-file-text"></i> 7:00 am
+                          <br>
+                          <small class="text-navy">3 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-coffee"></i> 8:00 am
+                          <br>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Coffee Break</strong></p>
+                          <p>
+                            Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been the industry's.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-phone"></i> 11:00 am
+                          <br>
+                          <small class="text-navy">21 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Phone with Jeronimo</strong></p>
+                          <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-user-md"></i> 09:00 pm
+                          <br>
+                          <small>21 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Go to the doctor dr Smith</strong></p>
+                          <p>
+                            Find some issue and go to doctor.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-user-md"></i> 11:10 pm
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Chat with Sandra</strong></p>
+                          <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-comments"></i> 12:50 pm
+                          <br>
+                          <small class="text-navy">48 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Chat with Monica and Sandra</strong></p>
+                          <p>
+                            Web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                            (injected humour and the like).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-phone"></i> 08:50 pm
+                          <br>
+                          <small class="text-navy">68 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Phone to James</strong></p>
+                          <p>
+                            Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="timeline-item">
+                      <div class="row">
+                        <div class="col-xs-3 date">
+                          <i class="fa fa-file-text"></i> 7:00 am
+                          <br>
+                          <small class="text-navy">3 hour ago</small>
+                        </div>
+                        <div class="col-xs-7 content">
+                          <p class="m-b-xs"><strong>Send documents to Mike</strong></p>
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- end of Row -->
+
+
+
+
+
+
+
+
+
+            {{/autoForm}}
+
+
+
+
+          </div>
+          <!-- end of timeline-->
+
           <!-- Start of image manager tab -->
           <div id="imagemanager" class="tab-pane fade">
 
-            <h2 class="h2heading">Original Photos<span class="pull-right margin-right:15px;"><button>Add Images</button>&nbsp;<button>Print PDF</button>&nbsp;<button>Print Selected</button></span></h2>
+            <h2 class="h2heading">Original Photos<span class="pull-right margin-right:15px;"><button class="imagemanagerbutton">Add Images</button>&nbsp;<button class="imagemanagerbutton">Print PDF</button>&nbsp;<button class="imagemanagerbutton">Print Selected</button><button class="imagemanagerbutton">Delete Selected</button></span></h2>
+
+
             <div class="row">
 
             </div>
@@ -1014,70 +1275,95 @@
             </div>
             <!-- End of Empty Row -->
 
+
+            <script>
+              $(function () {
+                $("#sortable, #sortable2").sortable({
+                  connectWith: ".test1",
+                  containment: ""
+                });
+              });
+              $("#sortable1,#sortable2").disableSelection();
+            </script>
+
+            <h2 class="h2heading2">Center</h2>
+
+
             <div class="row">
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                  <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
+              <div id="sortable" class="test1">
+
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <input type="checkbox" class="checkbox" id="check1" style="position:absolute;top:5px;left:25px;" />
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class="">
+                    <input type="text" style="width:100%" name="LastName" placeholder="Mouse" class=""></div>
+                </div>
+
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
+                </div>
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
+                </div>
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
+                </div>
+
+                <div style="height:50px;"></div>
+
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <input type="checkbox" class="checkbox" id="check1" style="position:absolute;top:5px;left:25px;" />
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class="">
+                    <input type="text" style="width:100%" name="LastName" placeholder="Mouse" class=""></div>
+                </div>
+
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
+                </div>
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
+                </div>
+
+                <div class="col-md-3 thumb">
+                  <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                  </a>
+                  <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
+                </div>
               </div>
             </div>
 
-            <h2 class="h2heading">Supplement 1 Photos<span class="pull-right margin-right:15px;"><button>Add Images</button>&nbsp;<button>Print PDF</button>&nbsp;<button>Print Selected</button></span></h2>
+
+            <!-- End of Row -->
+
+            <h2 class="h2heading">Supplement 1 Photos<span class="pull-right margin-right:15px;"><button class="imagemanagerbutton">Add Images</button>&nbsp;<button class="imagemanagerbutton">Print PDF</button>&nbsp;<button class="imagemanagerbutton">Print Selected</button><button class="imagemanagerbutton">Delete Selected</button></span></h2>
 
             <div class="row">
               <div class="col-lg-3 col-md-4 col-xs-6 thumb">
@@ -1161,7 +1447,7 @@
               <div class="row spacethebottom">
               </div>
               <!-- end of row  -->
-
+              
               <div class="form-group">
                 <label class="col-md-1 control-label">Retail Base</label>
                 <div class="col-md-2">
@@ -1571,7 +1857,7 @@
               <div class="row spacethebottom">
                 <label class="col-md-2 control-label">Old Damages</label>
                 <div class="col-md-6">
-                  <textarea rows="4" cols="60" id="content" name="content"></textarea>
+                  <textarea rows="4" style="width:100%" id="content" name="content"></textarea>
                 </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">Total Old Damages</label>
@@ -1582,10 +1868,10 @@
 
               </div>
               <!-- End of Row -->
-             <div class="row spacethebottom">
+              <div class="row spacethebottom">
                 <label class="col-md-2 control-label">Betterment</label>
                 <div class="col-md-6">
-                  <textarea rows="4" cols="60" id="content" name="content"></textarea>
+                  <textarea rows="4" style="width:100%" id="content" name="content"></textarea>
                 </div>
                 <div class="form-group">
                   <label class="col-md-2 control-label">Total Betterment</label>
@@ -1628,7 +1914,7 @@
                   <h3>Appraiser Comments</h3>
                 </div>
                 <div class="col-md-12">
-                  <textarea rows="10" cols="150" id="content" name="content"></textarea>
+                  <textarea rows="10" style="width:100%" name="content"></textarea>
                 </div>
               </div>
               <!-- end of row  -->
@@ -1655,6 +1941,9 @@
 
           <!-- Start of supp tab -->
           <div id="supplement" class="tab-pane fade">
+
+
+
           </div>
 
           <!-- end supp tab -->
