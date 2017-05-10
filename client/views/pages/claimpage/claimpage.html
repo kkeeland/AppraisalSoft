@@ -822,7 +822,16 @@
 
           <div id="invoice" class="tab-pane fade">
 
-            <h2 class="h2heading">Invoice Details</h2>
+            <h2 class="h2heading">Invoice Details
+              <span class="pull-right">
+              <select class="form-control" id="sel1">
+                  <option>ESTIMATE: 115122ALO</option>
+                  <option>SUPPLEMENT 1: 115122ALO-1</option>
+                  <option>SUPPLEMENT 2: 115122ALO-2</option>
+              </select>
+              </span>
+              
+              </h2>
 
             <!-- Start of Row 1a -->
             {{#autoForm id="newAssignment" type="method" schema=Schema.Claims collection="Claims" meteormethod="addClaimdata"}}
@@ -1043,12 +1052,19 @@
                       {{> afFieldInput id='serviceFee' type='text' name='serviceFee'}}
                     </div>
                   </div>
-
-
-
-
                 </div>
 
+                <!-- End of Row -->
+
+                <div class="row spacethebottom">
+
+                  <div class="form-group {{#if afFieldIsInvalid name='appraisersOption'}}has-error{{/if}}">
+                    <label class="col-md-2 control-label">Reuseable Notes</label><a href="#">Add New Note</a>
+                    <div class="col-md-7">
+                      {{> afFieldInput type='select' name='predefinedappraisercomments'}}
+                    </div>
+                  </div>
+                </div>
                 <!-- End of Row -->
 
                 <!-- Empty Row -->
@@ -1108,14 +1124,6 @@
 
                           <p>Conference on the sales results for the previous year. Monica please examine sales trends in marketing
                             and products. Below please find the current status of the sale.
-                          </p>
-
-                          <p><span data-diameter="40" class="updating-chart" style="display: none;">5,10,6,4,4,1,0,8,2,3,8,1,1,7,8,3,7,6,3,5,9,7,5,6,7,0,9,9,6,4,4,9,3,6,10,2,9</span>
-                            <svg class="peity" height="16" width="64">
-                              <polygon fill="#1ab394" points="0 15 0 8 1.7777777777777777 0.5 3.5555555555555554 6.5 5.333333333333333 9.5 7.111111111111111 9.5 8.88888888888889 14 10.666666666666666 15.5 12.444444444444443 3.5 14.222222222222221 12.5 16 11 17.77777777777778 3.5 19.555555555555554 14 21.333333333333332 14 23.11111111111111 5 24.888888888888886 3.5 26.666666666666664 11 28.444444444444443 5 30.22222222222222 6.5 32 11 33.77777777777778 8 35.55555555555556 2 37.33333333333333 5 39.11111111111111 8 40.888888888888886 6.5 42.666666666666664 5 44.44444444444444 15.5 46.22222222222222 2 48 2 49.77777777777777 6.5 51.55555555555555 9.5 53.33333333333333 9.5 55.11111111111111 2 56.888888888888886 11 58.666666666666664 6.5 60.44444444444444 0.5 62.22222222222222 12.5 64 2 64 15"></polygon>
-                              <polyline fill="transparent" points="0 8 1.7777777777777777 0.5 3.5555555555555554 6.5 5.333333333333333 9.5 7.111111111111111 9.5 8.88888888888889 14 10.666666666666666 15.5 12.444444444444443 3.5 14.222222222222221 12.5 16 11 17.77777777777778 3.5 19.555555555555554 14 21.333333333333332 14 23.11111111111111 5 24.888888888888886 3.5 26.666666666666664 11 28.444444444444443 5 30.22222222222222 6.5 32 11 33.77777777777778 8 35.55555555555556 2 37.33333333333333 5 39.11111111111111 8 40.888888888888886 6.5 42.666666666666664 5 44.44444444444444 15.5 46.22222222222222 2 48 2 49.77777777777777 6.5 51.55555555555555 9.5 53.33333333333333 9.5 55.11111111111111 2 56.888888888888886 11 58.666666666666664 6.5 60.44444444444444 0.5 62.22222222222222 12.5 64 2"
-                                stroke="#169c81" stroke-width="1" stroke-linecap="square"></polyline>
-                            </svg>
                           </p>
                         </div>
                       </div>
@@ -1324,9 +1332,6 @@
                   <div class=""><input type="text" style="width:100%" name="LastName" value="Mouse"></div>
                 </div>
 
-                <div style="height:50px;"></div>
-
-
                 <div class="col-md-3 thumb">
                   <a class="thumbnail" href="#">
                     <input type="checkbox" class="checkbox" id="check1" style="position:absolute;top:5px;left:25px;" />
@@ -1447,7 +1452,7 @@
               <div class="row spacethebottom">
               </div>
               <!-- end of row  -->
-              
+
               <div class="form-group">
                 <label class="col-md-1 control-label">Retail Base</label>
                 <div class="col-md-2">
