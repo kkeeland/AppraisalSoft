@@ -615,8 +615,10 @@ Template.Claimpage.helpers({
 
 });
 
-Template.Claimpage.onRendered = function() {
-   $('#content').ckeditor();
+Template.Claimpage.rendered = function() {
+    // Initialize summernote plugin
+    $('.summernote').summernote();
+
  };
 
 
